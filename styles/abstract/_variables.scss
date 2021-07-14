@@ -1,12 +1,38 @@
-// FONTS
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-$font-primary: 'Poppins', sans-serif;
-
 // COLORS
 :root {
   --color-white: #ffffff;
-  --color-grey: #6a6a6a;
+  --color-gray: #c4c4c4;
   --color-black: #000000;
-  --color-gold: #fabe7d;
+  --color-purple: #8000ff;
+  --color-light-purple: rgb(207, 89, 230);
+  --color-light-blue: #6BC5F8;
 }
+
+// FONTS
+
+@font-face {
+  font-family: "Circular Std Book";
+  src: url("../../public/fonts/CircularStd-Book.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "D-DIN Condensed";
+  src: url("../../public/fonts/D-DINCondensed-Bold.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mark Pro";
+  src: url("../../public/fonts/MarkPro-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+$font-primary: "Circular Std Book", sans-serif;
+$font-secondary: "Mark Pro", sans-serif;
+$font-tertiary: "D-DIN Condensed", sans-serif;
