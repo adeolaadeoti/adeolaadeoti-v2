@@ -1,20 +1,27 @@
 .navigation-wrapper {
-  // position: absolute;
-  // top: 0;
-  // left: 0;
+  // position: fixed;
   // width: 100%;
   // height: 100%;
 
+  position: relative;
+  // width: 100vw;
+  z-index: 9999;
+
   .menu-top {
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    left: 0;
     padding: 2rem 4rem;
     @include centerContent;
     width: 50%;
-    margin: 0rem auto;
-    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
     background: rgba(42, 43, 56, 0.5);
-    border: 1.5px solid #2a2b37;
+    border: .2rem solid #2a2b37;
     backdrop-filter: blur(104px);
     border-radius: 2rem;
+
     .brand-logo {
       display: flex;
       justify-content: space-between;
@@ -39,11 +46,12 @@
     }
 
     .menu-wrapper {
-      grid-column: 2 / 14;
-      position: absolute;
+      position: fixed;
       top: 0;
-      left: 0;
-      background-color: red;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
     }
   }
 }

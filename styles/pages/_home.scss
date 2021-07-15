@@ -6,7 +6,7 @@
     content: "";
     display: block;
     position: absolute;
-    top: -14rem;
+    top: -2rem;
     left: 0rem;
     width: 26rem;
     height: 26rem;
@@ -18,7 +18,7 @@
     content: "";
     display: block;
     position: absolute;
-    bottom: 0rem;
+    bottom: 10rem;
     right: 0rem;
     width: 25rem;
     height: 45rem;
@@ -31,7 +31,7 @@
 
 .header {
   grid-column: 2/14;
-  margin-top: 10rem;
+  margin-top: 20rem;
 
   &__hero {
     &--heading {
@@ -59,18 +59,18 @@
         animation: gradient 3s ease infinite;
       }
 
-      &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 25rem;
-        right: 40rem;
-        width: 12rem;
-        height: 12rem;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-image: url("../../public/webp/coffetti.webp");
-      }
+      // &::after {
+      //   content: "";
+      //   display: block;
+      //   position: absolute;
+      //   top: 25rem;
+      //   right: 40rem;
+      //   width: 12rem;
+      //   height: 12rem;
+      //   background-repeat: no-repeat;
+      //   background-size: contain;
+      //   background-image: url("../../public/webp/coffetti.webp");
+      // }
     }
     &--cta {
       margin-top: 13rem;
@@ -110,6 +110,8 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 16rem;
+    margin-bottom: 14rem;
+    color: var(--color-gray);
 
     &--right {
       width: 12%;
@@ -122,6 +124,162 @@
       line-height: 92.4%;
       letter-spacing: -0.03em;
       text-transform: uppercase;
+      &:hover {
+        color: var(--color-white);
+      }
     }
+  }
+}
+
+// section
+
+.section-projects {
+  grid-column: 2/14;
+  margin-top: 20rem;
+
+  p {
+    margin-bottom: 15rem;
+    margin-top: 2rem;
+  }
+
+  .project-card {
+    width: 80%;
+    margin: 20rem auto;
+    background: linear-gradient(
+      180deg,
+      rgba(35, 37, 49, 0.5) 0%,
+      rgba(15, 15, 24, 0.5) 100%
+    );
+    border: 0.2rem solid #20222e;
+    box-sizing: border-box;
+    backdrop-filter: blur(54px);
+    border-radius: 7.3rem;
+
+    display: flex;
+    align-items: center;
+    padding: 6rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -5rem;
+      right: -5rem;
+      width: 15rem;
+      height: 15rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &:nth-of-type(1) {
+      a {
+        color: #6b9796;
+      }
+      &::before {
+        background-image: url("../../public/svg/01.svg");
+      }
+    }
+    &:nth-of-type(2) {
+      a {
+        color: #e6972f;
+      }
+      &::before {
+        background-image: url("../../public/svg/02.svg");
+      }
+    }
+    &:nth-of-type(3) {
+      a {
+        color: #57A3C7;
+      }
+      &::before {
+        background-image: url("../../public/svg/03.svg");
+      }
+    }
+    &:nth-of-type(4) {
+      a {
+        color: #C08AF1;
+      }
+      &::before {
+        background-image: url("../../public/svg/04.svg");
+      }
+    }
+
+    &__left {
+      margin-right: 6rem;
+      h4 {
+        transform: rotate(180deg);
+        writing-mode: tb-rl;
+        font-family: $font-tertiary;
+        font-size: 1.3rem;
+        line-height: 92.4%;
+        letter-spacing: 0.19em;
+        color: #8b8b8b;
+      }
+    }
+    &__middle {
+      width: 35rem;
+      height: 40rem;
+
+      img {
+        border-radius: 5.3rem;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &__right {
+      margin-left: 6rem;
+      h2 {
+        margin-bottom: 6rem;
+      }
+    }
+    &__link {
+      display: inline-block;
+      font-family: $font-tertiary;
+      font-size: 1.8rem;
+      line-height: 92.4%;
+      letter-spacing: 0.19em;
+      text-decoration: none;
+      position: relative;
+
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        bottom: -1rem;
+        left: 0;
+        width: 50%;
+        height: 1px;
+        background: var(--color-gray);
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+    &__socials {
+      margin-top: 10rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 5rem;
+    }
+  }
+}
+
+
+// section=reviews
+
+.section-reviews {
+  grid-column: 1/15;
+  display: grid;
+  grid-template-columns: 1fr repeat(12, minmax(min-content, 10rem)) 1fr;
+  background-color: var(--color-purple);
+  &__top {
+    grid-column: 2/14;
   }
 }

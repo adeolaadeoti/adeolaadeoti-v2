@@ -21,8 +21,14 @@ import { motion } from "framer-motion";
 //   },
 // };
 
-export const MobileNavigation = ({variants}: any) => (
-  <motion.div variants={variants} className="menu-wrapper">
+export const MobileNavigation = ({ variants }: any) => (
+  <motion.div
+    data-scroll
+    data-scroll-sticky
+    data-scroll-target="#menu-target"
+    variants={variants}
+    className="menu-wrapper"
+  >
     <h1>Mobile Navigation</h1>
   </motion.div>
 );

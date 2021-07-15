@@ -1,7 +1,58 @@
 .heading {
-  &-2 {
-    &__sub {
-      // color: var(--color-white);
+  &-1 {
+    display: flex;
+    align-items: center;
+    font-size: 5rem;
+    letter-spacing: -0.03em;
+    font-family: $font-secondary;
+    span {
+      margin-right: 1rem;
+      background-image: linear-gradient(
+        to right,
+        var(--color-light-purple),
+        var(--color-light-blue)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
     }
+    &__sub {
+      span {
+        background-image: linear-gradient(
+          to right,
+          var(--color-white),
+          var(--color-white)
+        );
+      }
+    }
+  }
+  &-2 {
+    font-size: 4.2rem;
+    line-height: 81.4%;
+    letter-spacing: -0.03em;
+    color: var(--color-white);
+    font-family: $font-secondary;
+    &__sub {
+    }
+  }
+}
+
+.about-text {
+  grid-column: 2/14;
+  width: 50%;
+  font-size: 1.7rem;
+  line-height: 130.4%;
+  color: var(--color-gray);
+  display: block;
+}
+
+.paragraph {
+  font-size: 1.7rem;
+  line-height: 130.4%;
+  color: var(--color-gray);
+
+  &__sub {
+    color: #DCB9FF;
   }
 }

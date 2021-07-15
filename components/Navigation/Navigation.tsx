@@ -50,7 +50,12 @@ export const Navigation = () => {
       animate={isOpen ? "open" : "closed"}
       className="navigation-wrapper"
     >
-      <div className="menu-top">
+      <div
+        data-scroll
+        data-scroll-sticky
+        data-scroll-target="#menu-target"
+        className="menu-top"
+      >
         <Link href="/">
           <a className="brand-logo">
             <img
