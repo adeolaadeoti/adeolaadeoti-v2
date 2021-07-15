@@ -34,7 +34,6 @@
   margin-top: 20rem;
   padding: 0 6rem;
 
-
   &__hero {
     &--heading {
       font-family: $font-secondary;
@@ -116,7 +115,7 @@
     color: var(--color-gray);
 
     &--right {
-      width: 12%;
+      width: 20rem;
       @include centerContent;
     }
     a {
@@ -345,7 +344,6 @@
   }
 }
 
-
 .review-card__anim1 {
   animation: reviewCardAnim1 25s ease-in-out infinite alternate;
 
@@ -358,5 +356,76 @@
   animation: reviewCardAnim2 25s ease-in-out infinite alternate;
   &:hover {
     animation-play-state: paused;
+  }
+}
+
+// section-contact
+.section-contact {
+  grid-column: 2/14;
+  padding: 0 6rem;
+  margin-top: 12rem;
+
+  &__h2 {
+    font-size: 4.5rem;
+    line-height: 130.4%;
+    letter-spacing: -0.06em;
+    color: var(--color-gray);
+    font-weight: 100;
+    margin-top: 4rem;
+
+    a {
+      color: var(--color-white);
+      font-weight: bold;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--color-light-blue);
+      }
+    }
+  }
+}
+
+// section-socials
+.section-socials {
+  grid-column: 2/14;
+  padding: 0 6rem;
+  margin-top: 12rem;
+
+  p {
+    margin-top: 2rem;
+  }
+
+  &--links {
+    width: 30rem;
+    @include centerContent;
+    margin-top: 4rem;
+  }
+  a {
+    color: var(--color-gray);
+    text-decoration: none;
+    font-family: $font-tertiary;
+    line-height: 92.4%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 100;
+    &:hover {
+      color: var(--color-white);
+    }
+  }
+}
+
+.footer {
+  @include centerContent;
+  width: 100%;
+  margin-top: 14rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  padding-top: 4rem;
+  padding-bottom: 0rem;
+  border-top: 1px solid rgba(#c4c4c4, 0.25);
+  &__socials {
+    @include centerContent;
+    width: 6rem;
   }
 }

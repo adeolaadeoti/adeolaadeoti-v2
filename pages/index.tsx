@@ -93,8 +93,8 @@ const index: React.FC<indexProps> = ({}) => {
       <main className="container">
         <p className="about-text">
           Hello stranger! 👋, my name is adeola and I am a frontend engineer,
-          passionate <br /> about digital products that help people experience everyday
-          life, not endure it.
+          passionate <br /> about digital products that help people experience
+          everyday life, not endure it.
         </p>
         <section id="sectionProjects" className="section-projects">
           <h1 className="heading-1">
@@ -235,7 +235,9 @@ const index: React.FC<indexProps> = ({}) => {
                   </div>
                 </div>
                 <div className="review-card__bottom">
-                  <h2 className="review-card__h2">This is awesome man 🔥🔥☺️</h2>
+                  <h2 className="review-card__h2">
+                    This is awesome man 🔥🔥☺️
+                  </h2>
                 </div>
               </div>
               <div className="review-card">
@@ -249,7 +251,9 @@ const index: React.FC<indexProps> = ({}) => {
                   </div>
                 </div>
                 <div className="review-card__bottom">
-                  <h2 className="review-card__h2">This is awesome man 🔥🔥☺️</h2>
+                  <h2 className="review-card__h2">
+                    This is awesome man 🔥🔥☺️
+                  </h2>
                 </div>
               </div>
               <div className="review-card">
@@ -263,7 +267,9 @@ const index: React.FC<indexProps> = ({}) => {
                   </div>
                 </div>
                 <div className="review-card__bottom">
-                  <h2 className="review-card__h2">This is awesome man 🔥🔥☺️</h2>
+                  <h2 className="review-card__h2">
+                    This is awesome man 🔥🔥☺️
+                  </h2>
                 </div>
               </div>
               <div className="review-card">
@@ -277,7 +283,9 @@ const index: React.FC<indexProps> = ({}) => {
                   </div>
                 </div>
                 <div className="review-card__bottom">
-                  <h2 className="review-card__h2">This is awesome man 🔥🔥☺️</h2>
+                  <h2 className="review-card__h2">
+                    This is awesome man 🔥🔥☺️
+                  </h2>
                 </div>
               </div>
               <div className="review-card">
@@ -291,7 +299,9 @@ const index: React.FC<indexProps> = ({}) => {
                   </div>
                 </div>
                 <div className="review-card__bottom">
-                  <h2 className="review-card__h2">This is awesome man 🔥🔥☺️</h2>
+                  <h2 className="review-card__h2">
+                    This is awesome man 🔥🔥☺️
+                  </h2>
                 </div>
               </div>
               <div className="review-card">
@@ -305,7 +315,9 @@ const index: React.FC<indexProps> = ({}) => {
                   </div>
                 </div>
                 <div className="review-card__bottom">
-                  <h2 className="review-card__h2">This is awesome man 🔥🔥☺️</h2>
+                  <h2 className="review-card__h2">
+                    This is awesome man 🔥🔥☺️
+                  </h2>
                 </div>
               </div>
               <div className="review-card">
@@ -319,7 +331,9 @@ const index: React.FC<indexProps> = ({}) => {
                   </div>
                 </div>
                 <div className="review-card__bottom">
-                  <h2 className="review-card__h2">This is awesome man 🔥🔥☺️</h2>
+                  <h2 className="review-card__h2">
+                    This is awesome man 🔥🔥☺️
+                  </h2>
                 </div>
               </div>
               <div className="review-card">
@@ -333,7 +347,9 @@ const index: React.FC<indexProps> = ({}) => {
                   </div>
                 </div>
                 <div className="review-card__bottom">
-                  <h2 className="review-card__h2">This is awesome man 🔥🔥☺️</h2>
+                  <h2 className="review-card__h2">
+                    This is awesome man 🔥🔥☺️
+                  </h2>
                 </div>
               </div>
               <div className="review-card">
@@ -347,7 +363,9 @@ const index: React.FC<indexProps> = ({}) => {
                   </div>
                 </div>
                 <div className="review-card__bottom">
-                  <h2 className="review-card__h2">This is awesome man 🔥🔥☺️</h2>
+                  <h2 className="review-card__h2">
+                    This is awesome man 🔥🔥☺️
+                  </h2>
                 </div>
               </div>
               <div className="review-card">
@@ -361,7 +379,9 @@ const index: React.FC<indexProps> = ({}) => {
                   </div>
                 </div>
                 <div className="review-card__bottom">
-                  <h2 className="review-card__h2">This is awesome man 🔥🔥☺️</h2>
+                  <h2 className="review-card__h2">
+                    This is awesome man 🔥🔥☺️
+                  </h2>
                 </div>
               </div>
             </div>
@@ -377,7 +397,9 @@ const index: React.FC<indexProps> = ({}) => {
                   </div>
                 </div>
                 <div className="review-card__bottom">
-                  <h2 className="review-card__h2">This is awesome man 🔥🔥☺️</h2>
+                  <h2 className="review-card__h2">
+                    This is awesome man 🔥🔥☺️
+                  </h2>
                 </div>
               </div>
               <div className="review-card">
@@ -391,7 +413,9 @@ const index: React.FC<indexProps> = ({}) => {
                   </div>
                 </div>
                 <div className="review-card__bottom">
-                  <h2 className="review-card__h2">This is awesome man 🔥🔥☺️</h2>
+                  <h2 className="review-card__h2">
+                    This is awesome man 🔥🔥☺️
+                  </h2>
                 </div>
               </div>
               <div className="review-card">
@@ -405,7 +429,9 @@ const index: React.FC<indexProps> = ({}) => {
                   </div>
                 </div>
                 <div className="review-card__bottom">
-                  <h2 className="review-card__h2">This is awesome man 🔥🔥☺️</h2>
+                  <h2 className="review-card__h2">
+                    This is awesome man 🔥🔥☺️
+                  </h2>
                 </div>
               </div>
               <div className="review-card">
@@ -419,7 +445,9 @@ const index: React.FC<indexProps> = ({}) => {
                   </div>
                 </div>
                 <div className="review-card__bottom">
-                  <h2 className="review-card__h2">This is awesome man 🔥🔥☺️</h2>
+                  <h2 className="review-card__h2">
+                    This is awesome man 🔥🔥☺️
+                  </h2>
                 </div>
               </div>
               <div className="review-card">
@@ -433,7 +461,9 @@ const index: React.FC<indexProps> = ({}) => {
                   </div>
                 </div>
                 <div className="review-card__bottom">
-                  <h2 className="review-card__h2">This is awesome man 🔥🔥☺️</h2>
+                  <h2 className="review-card__h2">
+                    This is awesome man 🔥🔥☺️
+                  </h2>
                 </div>
               </div>
               <div className="review-card">
@@ -447,7 +477,9 @@ const index: React.FC<indexProps> = ({}) => {
                   </div>
                 </div>
                 <div className="review-card__bottom">
-                  <h2 className="review-card__h2">This is awesome man 🔥🔥☺️</h2>
+                  <h2 className="review-card__h2">
+                    This is awesome man 🔥🔥☺️
+                  </h2>
                 </div>
               </div>
               <div className="review-card">
@@ -461,7 +493,9 @@ const index: React.FC<indexProps> = ({}) => {
                   </div>
                 </div>
                 <div className="review-card__bottom">
-                  <h2 className="review-card__h2">This is awesome man 🔥🔥☺️</h2>
+                  <h2 className="review-card__h2">
+                    This is awesome man 🔥🔥☺️
+                  </h2>
                 </div>
               </div>
               <div className="review-card">
@@ -475,7 +509,9 @@ const index: React.FC<indexProps> = ({}) => {
                   </div>
                 </div>
                 <div className="review-card__bottom">
-                  <h2 className="review-card__h2">This is awesome man 🔥🔥☺️</h2>
+                  <h2 className="review-card__h2">
+                    This is awesome man 🔥🔥☺️
+                  </h2>
                 </div>
               </div>
               <div className="review-card">
@@ -489,7 +525,9 @@ const index: React.FC<indexProps> = ({}) => {
                   </div>
                 </div>
                 <div className="review-card__bottom">
-                  <h2 className="review-card__h2">This is awesome man 🔥🔥☺️</h2>
+                  <h2 className="review-card__h2">
+                    This is awesome man 🔥🔥☺️
+                  </h2>
                 </div>
               </div>
               <div className="review-card">
@@ -503,13 +541,70 @@ const index: React.FC<indexProps> = ({}) => {
                   </div>
                 </div>
                 <div className="review-card__bottom">
-                  <h2 className="review-card__h2">This is awesome man 🔥🔥☺️</h2>
+                  <h2 className="review-card__h2">
+                    This is awesome man 🔥🔥☺️
+                  </h2>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+        <section className="section-contact">
+          <h1 className="heading-1">
+            <span>Sold Yet? </span> <small>🤙</small>
+          </h1>
+          <h2 className="section-contact__h2">
+            Thanks for stopping by, I’m currently looking to a new team of
+            creative designers and developers. If you think we might be a good
+            fit for one another, give me a
+            <a href="tel:+2349066383763"> call 🇳🇬 &nbsp;</a>
+            or send me an
+            <a
+              href="mailto:adeolaonigegeara@gmail.com"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+            >
+              &nbsp; email 📧
+            </a>
+            .
+          </h2>
+        </section>
+        <section className="section-socials">
+          <h1 className="heading-1">
+            <span>Dont be a stranger!</span> <small>👋</small>
+          </h1>
+          <p className="paragraph">Connect with me online</p>
+          <div className="section-socials--links">
+            <a href="https://github.com/adeolaadeoti" target="_blank">
+              👾 GH
+            </a>
+            <a href="https://twitter.com/adeolajs" target="_blank">
+              🐦 TW
+            </a>
+            <a href="https://www.linkedin.com/in/adeoladev" target="_blank">
+              💼 LD
+            </a>
+            <a href="https://www.instagram.com/adeolaadeoti_" target="_blank">
+              📸 IN
+            </a>
+          </div>
+        </section>
       </main>
+      <footer className="footer">
+        <img
+          src="svg/adeola-logo-footer.svg"
+          alt="design and devloped by adeola"
+        />
+        <div className="footer__socials">
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            <img src="svg/dribble.svg" alt="dribble logo" />
+          </a>
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            <img src="svg/github.svg" alt="github logo" />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 };
