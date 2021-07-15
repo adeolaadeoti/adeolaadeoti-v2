@@ -32,6 +32,8 @@
 .header {
   grid-column: 2/14;
   margin-top: 20rem;
+  padding: 0 6rem;
+
 
   &__hero {
     &--heading {
@@ -136,6 +138,7 @@
 .section-projects {
   grid-column: 2/14;
   margin-top: 20rem;
+  padding: 0 6rem;
 
   p {
     margin-bottom: 15rem;
@@ -190,7 +193,7 @@
     }
     &:nth-of-type(3) {
       a {
-        color: #57A3C7;
+        color: #57a3c7;
       }
       &::before {
         background-image: url("../../public/svg/03.svg");
@@ -198,7 +201,7 @@
     }
     &:nth-of-type(4) {
       a {
-        color: #C08AF1;
+        color: #c08af1;
       }
       &::before {
         background-image: url("../../public/svg/04.svg");
@@ -271,15 +274,89 @@
   }
 }
 
-
 // section=reviews
 
 .section-reviews {
   grid-column: 1/15;
   display: grid;
   grid-template-columns: 1fr repeat(12, minmax(min-content, 10rem)) 1fr;
-  background-color: var(--color-purple);
+  background-color: #050810;
+  padding: 8rem 0;
   &__top {
     grid-column: 2/14;
+    padding: 0 6rem;
+    p {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__bottom {
+    grid-column: 1/15;
+    overflow-x: hidden;
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+    &-wrapper {
+      @include centerContent;
+      width: max-content;
+      .review-card {
+        background: #171e2f;
+        border-radius: 2rem;
+        padding: 3rem;
+        margin: 1.5rem;
+        &__top {
+          @include centerContent;
+          margin-bottom: 3rem;
+          &--left {
+          }
+          &--right {
+            img {
+            }
+          }
+        }
+
+        &__bottom {
+        }
+
+        &__p {
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          line-height: 81.4%;
+          letter-spacing: 0.25em;
+          color: #585e6e;
+        }
+
+        &__h3 {
+          font-size: 1.9rem;
+          line-height: 81.4%;
+          letter-spacing: -0.01em;
+          color: #585e6e;
+          margin-top: 1.5rem;
+          font-weight: 100;
+        }
+
+        &__h2 {
+          font-size: 2rem;
+          line-height: 130.4%;
+          color: var(--color-white);
+          font-weight: 100;
+        }
+      }
+    }
+  }
+}
+
+
+.review-card__anim1 {
+  animation: reviewCardAnim1 25s ease-in-out infinite alternate;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+.review-card__anim2 {
+  animation: reviewCardAnim2 25s ease-in-out infinite alternate;
+  &:hover {
+    animation-play-state: paused;
   }
 }

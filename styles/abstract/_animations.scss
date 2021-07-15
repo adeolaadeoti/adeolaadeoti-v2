@@ -18,3 +18,21 @@
     transform: translateX(-100%);
   }
 }
+
+@keyframes reviewCardAnim1 {
+  from {
+    transform: translateX(-52%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes reviewCardAnim2 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-52%);
+  }
+}

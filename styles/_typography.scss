@@ -40,11 +40,12 @@
 
 .about-text {
   grid-column: 2/14;
-  width: 50%;
   font-size: 1.7rem;
   line-height: 130.4%;
   color: var(--color-gray);
   display: block;
+  padding: 0 6rem;
+
 }
 
 .paragraph {
@@ -53,6 +54,6 @@
   color: var(--color-gray);
 
   &__sub {
-    color: #DCB9FF;
+    color: #8B8B8B;
   }
 }
