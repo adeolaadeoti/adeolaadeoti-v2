@@ -16,7 +16,12 @@ interface pathProps {
 }
 
 const Path = (props: pathProps) => (
-  <motion.path fill="transparent" strokeWidth="1.5" stroke="#c4c4c4" {...props} />
+  <motion.path
+    fill="transparent"
+    strokeWidth="1.5"
+    stroke="#c4c4c4"
+    {...props}
+  />
 );
 
 export const MenuToggle: React.FC<menuToggleProps> = ({
@@ -24,9 +29,8 @@ export const MenuToggle: React.FC<menuToggleProps> = ({
   toggleState,
 }) => (
   <div className="toggle-button-wrapper">
-    <span>EN &nbsp; | &nbsp; FR</span>
+    {toggleState === true ? <span>CLOSE</span> : <span>MENU</span>}
     <button className="toggle-button" onClick={toggle}>
-      {/* {toggleState === true ? <span>CLOSE</span> : <span>MENU</span>} */}
       <svg width="57" height="20" viewBox="0 0 26 20">
         <Path
           variants={{

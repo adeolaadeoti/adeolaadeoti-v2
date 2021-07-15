@@ -429,3 +429,48 @@
     width: 6rem;
   }
 }
+
+.speaker {
+  @include centerContent;
+  width: 7rem;
+  height: 4rem;
+  border: 0.2rem solid var(--color-purple);
+  border-radius: 50px;
+  padding: 1rem 1.5rem;
+  position: relative;
+
+  &__toggle {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    z-index: 2;
+  }
+  &__muted {
+  }
+  &__unmuted {
+    transform: rotate(180deg);
+    .rect1-anim {
+      animation: rect1Anim 1s ease-in-out infinite alternate;
+    }
+    .rect2-anim {
+      animation: rect2Anim 1s ease-in-out infinite alternate;
+    }
+    .rect3-anim {
+      animation: rect3Anim 1s ease-in-out infinite alternate;
+    }
+    .rect4-anim {
+      animation: rect4Anim 1s ease-in-out infinite alternate;
+    }
+  }
+}
+
+.speaker__toggle--anim {
+  left: 54%;
+}

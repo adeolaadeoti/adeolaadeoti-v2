@@ -64,11 +64,6 @@
     margin-left: 1rem;
   }
   &__text {
-    // animation: logoLeftAnim 2s ease-in-out infinite;
+    animation: logoLeftAnim 15s cubic-bezier(1, 0, 0, 1) infinite;
   }
-}
-
-.brand-logo-anim {
-  animation: logoLeftAnim 2s ease-in-out;
-  transform: translateX(-100%);
 }
