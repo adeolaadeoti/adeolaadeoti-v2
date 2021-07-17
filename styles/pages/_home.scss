@@ -6,7 +6,7 @@
     content: "";
     display: block;
     position: absolute;
-    top: -2rem;
+    top: 0rem;
     left: 0rem;
     width: 26rem;
     height: 26rem;
@@ -31,7 +31,7 @@
 
 .header {
   grid-column: 2/14;
-  margin-top: 20rem;
+  margin-top: 25rem;
   padding: 0 6rem;
 
   &__hero {
@@ -125,6 +125,7 @@
       line-height: 92.4%;
       letter-spacing: -0.03em;
       text-transform: uppercase;
+      transition: all .3s ease-in-out;
       &:hover {
         color: var(--color-white);
       }
@@ -377,6 +378,7 @@
       color: var(--color-white);
       font-weight: bold;
       text-decoration: none;
+      transition: all .3s ease-in-out;
 
       &:hover {
         color: var(--color-light-blue);
@@ -409,6 +411,7 @@
     text-transform: uppercase;
     font-size: 3rem;
     font-weight: 100;
+    transition: all .3s ease-in-out;
     &:hover {
       color: var(--color-white);
     }

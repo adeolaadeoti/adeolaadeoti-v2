@@ -1,55 +1,38 @@
 import * as React from "react";
-import { motion, useCycle } from "framer-motion";
+import { motion } from "framer-motion";
 import { MenuToggle } from "./MenuToggle";
 import { MobileNavigation } from "./MobileNavigation";
 import Link from "next/link";
 
 const variants = {
   open: {
-    // y: 0,
-    opacity: 1,
-    // display: "block",
+    left: 0,
+    pointerEvent: "none",
     transition: {
-      // y: { stiffness: 1000, velocity: -100 },
-      // delay: 0.5,
+      duration: 1,
+      ease: [0.6, 0.01, -0.05, 0.9],
     },
   },
   closed: {
-    // y: 50,
-    // display: "none",
-    // pointerEvent: "none",
-    opacity: 0,
+    left: "-100vw",
+    pointerEvent: "none",
     transition: {
-      // y: { stiffness: 1000 },
+      delay: 1,
+      duration: 1,
+      ease: [0.6, 0.01, -0.05, 0.9],
     },
   },
 };
 
-export const Navigation = () => {
-  const [isOpen, toggleOpen] = useCycle<boolean>(false, true);
-
-  // if isOpen is true, select the body element
-  // and apply a style to make it unscrollable
-  // else if isOpen is false, remove the style
-  function toggleBodyScroll(isOpen: boolean) {
-    const body = document.body;
-    if (isOpen) {
-      body.style.overflow = "hidden";
-    } else {
-      body.style.overflow = "";
-    }
-  }
-
-  React.useEffect(() => {
-    toggleBodyScroll(isOpen);
-  }, [isOpen]);
-
+export const Navigation = ({ isOpen, toggleOpen }: any) => {
   return (
     <motion.div
       initial={false}
       animate={isOpen ? "open" : "closed"}
       className="navigation-wrapper"
     >
+      {/* <div className="menu-background"></div> */}
+      <MobileNavigation variants={variants} isOpen={isOpen} />
       <div
         data-scroll
         data-scroll-sticky
@@ -72,9 +55,8 @@ export const Navigation = () => {
             </span>
           </a>
         </Link>
-        <MenuToggle toggle={() => toggleOpen()} toggleState={isOpen} />
+        <MenuToggle toggle={toggleOpen} toggleState={isOpen} />
       </div>
-      <MobileNavigation variants={variants} />
     </motion.div>
   );
 };

@@ -18,7 +18,7 @@
     margin-left: auto;
     margin-right: auto;
     background: rgba(42, 43, 56, 0.5);
-    border: .2rem solid #2a2b37;
+    border: 0.2rem solid #2a2b37;
     backdrop-filter: blur(104px);
     border-radius: 2rem;
 
@@ -44,15 +44,6 @@
         cursor: pointer;
       }
     }
-
-    .menu-wrapper {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #fff;
-    }
   }
 }
 
@@ -66,4 +57,111 @@
   &__text {
     animation: logoLeftAnim 15s cubic-bezier(1, 0, 0, 1) infinite;
   }
+}
+
+.menu-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #050810;
+  color: var(--color-white);
+}
+
+.navigation-top {
+  margin-top: 34rem;
+  @include centerContent;
+  padding: 0 40rem;
+  &__left {
+    text-align: center;
+    &--links {
+      width: 30rem;
+      @include centerContent;
+      margin-top: 4rem;
+      a {
+        color: var(--color-light-blue);
+        text-decoration: none;
+        font-family: $font-tertiary;
+        line-height: 92.4%;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        font-size: 3rem;
+        font-weight: 100;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          color: var(--color-white);
+        }
+      }
+    }
+  }
+  &__right {
+    text-align: center;
+    a {
+      font-size: 5rem;
+      letter-spacing: -0.03em;
+      margin-top: 2rem;
+      display: inline-block;
+      font-family: $font-secondary;
+      text-decoration: none;
+      color: var(--color-white);
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: var(--color-light-purple);
+      }
+    }
+  }
+}
+
+.navigation-bottom {
+  margin-top: 20rem;
+  padding: 0 20rem;
+  text-align: center;
+
+  &__projects {
+    margin-top: 3rem;
+    @include centerContent;
+    position: absolute;
+    bottom: -5rem;
+    width: 75vw;
+    &-card {
+      width: 38.5rem;
+      height: 28.8rem;
+      text-decoration: none;
+      position: relative;
+      font-family: $font-secondary;
+      font-size: 2.2rem;
+      line-height: 130%;
+      letter-spacing: -0.085em;
+
+      &:hover {
+        img {
+          opacity: 0.5;
+        }
+      }
+      img {
+        border-radius: 4.5rem;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: all 0.3s ease-in-out;
+      }
+
+      h2 {
+        text-align: left;
+        color: var(--color-white);
+        position: absolute;
+        top: 40%;
+        left: 10%;
+      }
+    }
+  }
+}
+
+.navigation-h4 {
+  font-family: $font-tertiary;
+  font-size: 1.8rem;
+  line-height: 92.4%;
+  letter-spacing: 0.19em;
+  font-weight: 100;
 }
