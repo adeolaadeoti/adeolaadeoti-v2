@@ -7,17 +7,20 @@ interface indexProps {}
 const locomotiveScroll =
   typeof window !== `undefined` ? require("locomotive-scroll").default : null;
 
+const hoverEffect =
+  typeof window !== `undefined` ? require("hover-effect").default : null;
+
 const index: React.FC<indexProps> = ({}) => {
   const [speakerState, setSpeakerState] = useState("muted");
   const [isToggleOpen, setIsToggleOpen] = useState<boolean>(false);
 
   const refScroll = React.useRef(null);
-  let scroll: any;
+  let lscroll: any;
 
   React.useEffect(() => {
     if (!refScroll.current) return;
     // @ts-ignore
-    scroll = new locomotiveScroll({
+    lscroll = new locomotiveScroll({
       el: refScroll.current,
       smooth: true,
       smartphone: {
@@ -27,7 +30,24 @@ const index: React.FC<indexProps> = ({}) => {
         smooth: true,
       },
     });
-  }, [refScroll]);
+
+    Array.from(document.querySelectorAll(".project-card__middle")).forEach(
+      (el: any) => {
+        const imgs: any = Array.from(el.querySelectorAll("img"));
+        new hoverEffect({
+          parent: el,
+          intensity: el.dataset.intensity || undefined,
+          speedIn: el.dataset.speedin || undefined,
+          speedOut: el.dataset.speedout || undefined,
+          easing: el.dataset.easing || undefined,
+          hover: el.dataset.hover || undefined,
+          image1: imgs[0].getAttribute("src"),
+          image2: imgs[1].getAttribute("src"),
+          displacementImage: el.dataset.displacement,
+        });
+      }
+    );
+  }, []);
 
   function handleSpeaker() {
     if (speakerState === "muted") {
@@ -172,8 +192,15 @@ const index: React.FC<indexProps> = ({}) => {
                   NEXT JS, LOCOMOTIVE SCROLL, FRAMER MOTION
                 </h4>
               </div>
-              <div className="project-card__middle">
+              <div
+                className="project-card__middle"
+                data-displacement="webp/myDistorsionImage.webp"
+                data-intensity="0.2"
+                data-speedIn="1.6"
+                data-speedOut="1.6"
+              >
                 <img src="webp/alexxandria-1.webp" alt="alexxandria model" />
+                <img src="webp/alexxandria-2.webp" alt="alexxandria logo" />
               </div>
               <div className="project-card__right">
                 <h2 className="heading-2">
@@ -200,8 +227,15 @@ const index: React.FC<indexProps> = ({}) => {
                   NEXT JS, LOCOMOTIVE SCROLL, FRAMER MOTION
                 </h4>
               </div>
-              <div className="project-card__middle">
+              <div
+                className="project-card__middle"
+                data-displacement="webp/myDistorsionImage.webp"
+                data-intensity="0.2"
+                data-speedIn="1.6"
+                data-speedOut="1.6"
+              >
                 <img src="webp/pixelchef-1.webp" alt="pixelchef" />
+                <img src="webp/pixelchef-2.webp" alt="pixelchef logo" />
               </div>
               <div className="project-card__right">
                 <h2 className="heading-2">PixelChef</h2>
@@ -225,8 +259,15 @@ const index: React.FC<indexProps> = ({}) => {
                   NEXT JS, LOCOMOTIVE SCROLL, FRAMER MOTION
                 </h4>
               </div>
-              <div className="project-card__middle">
+              <div
+                className="project-card__middle"
+                data-displacement="webp/myDistorsionImage.webp"
+                data-intensity="0.2"
+                data-speedIn="1.6"
+                data-speedOut="1.6"
+              >
                 <img src="webp/heatrow-1.webp" alt="heatrow" />
+                <img src="webp/heatrow-2.webp" alt="heatrow logo" />
               </div>
               <div className="project-card__right">
                 <h2 className="heading-2">
@@ -253,8 +294,15 @@ const index: React.FC<indexProps> = ({}) => {
                   NEXT JS, LOCOMOTIVE SCROLL, FRAMER MOTION
                 </h4>
               </div>
-              <div className="project-card__middle">
-                <img src="webp/adeola-1.webp" alt="adeola image" />
+              <div
+                className="project-card__middle"
+                data-displacement="webp/myDistorsionImage.webp"
+                data-intensity="0.2"
+                data-speedIn="1.6"
+                data-speedOut="1.6"
+              >
+                <img src="webp/adeola-1.webp" alt="adeola model" />
+                <img src="webp/adeola-2.webp" alt="adeola logo" />
               </div>
               <div className="project-card__right">
                 <h2 className="heading-2">
@@ -275,7 +323,13 @@ const index: React.FC<indexProps> = ({}) => {
               </div>
             </div>
           </section>
-          <section className="section-reviews">
+          <section
+            data-scroll
+            data-scroll-offset="35%"
+            data-scroll-repeat={true}
+            data-scroll-class="section-reviews__bg"
+            className="section-reviews"
+          >
             <div className="section-reviews__top">
               <h1 className="heading-1">
                 <span>Mmmm, a little brag </span> <small>😊</small>
@@ -611,7 +665,6 @@ const index: React.FC<indexProps> = ({}) => {
               </div>
             </div>
           </section>
-
           <section className="section-contact">
             <h1 className="heading-1">
               <span>Sold Yet? </span> <small>🤙</small>
@@ -667,6 +720,7 @@ const index: React.FC<indexProps> = ({}) => {
             </a>
           </div>
         </footer>
+
       </div>
     </>
   );

@@ -70,7 +70,7 @@
 }
 
 .navigation-top {
-  margin-top: 34rem;
+  margin-top: 30rem;
   @include centerContent;
   padding: 0 40rem;
   &__left {
@@ -119,7 +119,7 @@
   text-align: center;
 
   &__projects {
-    margin-top: 3rem;
+    margin-top: 5rem;
     @include centerContent;
     position: absolute;
     bottom: -5rem;
@@ -133,8 +133,11 @@
       font-size: 2.2rem;
       line-height: 130%;
       letter-spacing: -0.085em;
+      transition: all 0.3s ease-in-out;
 
       &:hover {
+        width: 41.5rem;
+        height: 31.8rem;  
         img {
           opacity: 0.5;
         }

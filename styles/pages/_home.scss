@@ -125,7 +125,7 @@
       line-height: 92.4%;
       letter-spacing: -0.03em;
       text-transform: uppercase;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
       &:hover {
         color: var(--color-white);
       }
@@ -222,13 +222,42 @@
     }
     &__middle {
       width: 35rem;
-      height: 40rem;
+      height: 45rem;
+      background-size: cover;
+      position: relative;
+      border-radius: 5.3rem;
+      overflow: hidden;
+
+      canvas {
+        position: absolute;
+        border-radius: 6px;
+        z-index: 0;
+      }
 
       img {
-        border-radius: 5.3rem;
-        height: 100%;
         width: 100%;
-        object-fit: cover;
+        height: 100%;
+
+        &:hover {
+          &:nth-child(2) {
+            opacity: 1;
+          }
+        }
+
+        &:nth-child(1) {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+        &:nth-child(2) {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
       }
     }
     &__right {
@@ -276,12 +305,16 @@
 
 // section=reviews
 
+.section-reviews__bg {
+  background-color: #050810;
+}
+
 .section-reviews {
   grid-column: 1/15;
   display: grid;
   grid-template-columns: 1fr repeat(12, minmax(min-content, 10rem)) 1fr;
-  background-color: #050810;
   padding: 8rem 0;
+  transition: all 0.3s ease-in-out;
   &__top {
     grid-column: 2/14;
     padding: 0 6rem;
@@ -378,7 +411,7 @@
       color: var(--color-white);
       font-weight: bold;
       text-decoration: none;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
 
       &:hover {
         color: var(--color-light-blue);
@@ -411,7 +444,7 @@
     text-transform: uppercase;
     font-size: 3rem;
     font-weight: 100;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     &:hover {
       color: var(--color-white);
     }

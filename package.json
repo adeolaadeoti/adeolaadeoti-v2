@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "framer-motion": "latest",
+    "hover-effect": "^1.1.0",
     "locomotive-scroll": "^4.1.1",
     "next": "latest",
     "react": "^17.0.1",

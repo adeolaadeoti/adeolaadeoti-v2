@@ -31,7 +31,12 @@ export const MenuToggle: React.FC<menuToggleProps> = ({
   <div className="toggle-button-wrapper">
     {toggleState === true ? <span>CLOSE</span> : <span>MENU</span>}
     <button className="toggle-button" onClick={toggle}>
-      <svg width="57" height="20" viewBox="0 0 26 20">
+      <motion.svg
+        whileHover={{ width: 47, height: 15 }}
+        width="57"
+        height="20"
+        viewBox="0 0 26 20"
+      >
         <Path
           variants={{
             closed: { d: "M 2 2.5 L 57 2.5" },
@@ -52,7 +57,7 @@ export const MenuToggle: React.FC<menuToggleProps> = ({
             open: { d: "M 1 5 L 57 18.346" },
           }}
         />
-      </svg>
+      </motion.svg>
     </button>
   </div>
 );
