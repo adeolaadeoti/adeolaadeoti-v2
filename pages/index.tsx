@@ -31,12 +31,14 @@ const index: React.FC<indexProps> = ({}) => {
       },
     });
 
-    window.addEventListener("load", (event) => {
-      var image = document.querySelector("img");
-      var isLoaded = image.complete && image.naturalHeight !== 0;
+    // update locomotive scroll
+    window.addEventListener("load", (event: any) => {
+      let image = document.querySelector("img");
+      let isLoaded = image.complete && image.naturalHeight !== 0;
       lscroll.update();
     });
 
+    // image hover effect
     Array.from(document.querySelectorAll(".project-card__middle")).forEach(
       (el: any) => {
         const imgs: any = Array.from(el.querySelectorAll("img"));
@@ -53,6 +55,12 @@ const index: React.FC<indexProps> = ({}) => {
         });
       }
     );
+
+    // header cursor
+    const cursor = document.querySelector(".cursor");
+    window.onmousemove = (e) => {
+      cursor.setAttribute("style", `top: ${e.pageY}px; left: ${e.pageX}px;`);
+    };
   }, []);
 
   function handleSpeaker() {
@@ -78,11 +86,11 @@ const index: React.FC<indexProps> = ({}) => {
           <title>Adeola Adeoti &mdash; Frontend Devloper</title>
           <link rel="icon" href="svg/favicon.svg" />
         </Head>
+        <div className="cursor"></div>
         <Navigation
           isOpen={isToggleOpen}
           toggleOpen={() => toggleBodyScroll(isToggleOpen)}
         />
-        <div id="blot"></div>
         <div className="header-wrapper">
           <header className="header">
             <div className="header__hero">
@@ -236,9 +244,7 @@ const index: React.FC<indexProps> = ({}) => {
 
             <div className="project-card">
               <div className="project-card__left">
-                <h4 className="heading-4">
-                  NEXT JS, LOCOMOTIVE SCROLL, FRAMER MOTION
-                </h4>
+                <h4 className="heading-4">REACT JS, FRAMER MOTION</h4>
               </div>
               <div
                 className="project-card__middle"
@@ -317,9 +323,7 @@ const index: React.FC<indexProps> = ({}) => {
 
             <div className="project-card">
               <div className="project-card__left">
-                <h4 className="heading-4">
-                  NEXT JS, LOCOMOTIVE SCROLL, FRAMER MOTION
-                </h4>
+                <h4 className="heading-4">HTML, SCSS, JAVASCRIPT, GSAP</h4>
               </div>
               <div
                 className="project-card__middle"

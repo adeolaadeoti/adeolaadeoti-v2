@@ -43,7 +43,6 @@
   }
 }
 
-
 @keyframes rect1Anim {
   0% {
     height: 5.8px;
@@ -87,4 +86,18 @@
   100% {
     height: 3px;
   }
+}
+
+@keyframes cursorAnim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.rot {
+  animation: cursorAnim 1s infinite linear;
 }

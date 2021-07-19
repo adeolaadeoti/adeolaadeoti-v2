@@ -36,21 +36,34 @@ body {
   font-family: $font-primary, sans-serif;
   font-size: 1.6rem;
   overflow-x: hidden;
-  background: linear-gradient(
-    115deg,
-    #1a1e2b,
-    #10101a,
-    #1a1e2b,
-    #10101a,
-  );
+  background: linear-gradient(115deg, #1a1e2b, #10101a, #1a1e2b, #10101a);
   background-size: 400% 400%;
-  animation: gradient 10s ease-in-out infinite alternate;
-
+  animation: gradient 7s ease-in-out infinite alternate;
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr repeat(12, minmax(min-content, 10rem)) 1fr;
+}
+
+// cursor
+.cursor {
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  top: 40%;
+  right: 20%;
+  pointer-events: none;
+  transition: left top 0.1s ease-in-out;
+  z-index: 1233333;
+  background-image: url("../public/svg/cursor.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: cursorAnim 10s infinite linear;
+
+  @media only screen and (max-width: 52.5em) {
+    opacity: 0;
+  }
 }
 
 /*! locomotive-scroll v4.1.1 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
