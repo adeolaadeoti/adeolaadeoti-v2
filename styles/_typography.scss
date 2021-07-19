@@ -7,11 +7,7 @@
     font-family: $font-secondary;
     span {
       margin-right: 1rem;
-      background-image: linear-gradient(
-        to right,
-        var(--color-light-purple),
-        var(--color-light-blue)
-      );
+      background-image: linear-gradient(to right, #b0f3f1, #ffcfdf);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -29,13 +25,76 @@
   }
   &-2 {
     font-size: 4.2rem;
-    line-height: 81.4%;
+    line-height: 105%;
     letter-spacing: -0.03em;
     color: var(--color-white);
     font-family: $font-secondary;
     &__sub {
     }
   }
+}
+
+.alexxandria-anim {
+  background: linear-gradient(
+    -45deg,
+    #63898A,
+    #9FBCBF,
+    var(--color-white),
+    var(--color-white)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400% 400%;
+  line-height: 105%;
+  animation: gradient 3s ease-in-out;
+}
+
+.pixelchef-anim {
+  background: linear-gradient(
+    -45deg,
+    #fbb034,
+    #ffdd00,
+    var(--color-white),
+    var(--color-white)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400% 400%;
+  line-height: 105%;
+  animation: gradient 3s ease-in-out;
+}
+
+.heatrow-anim {
+  background: linear-gradient(
+    -45deg,
+    #045de9,
+    #09c6f9,
+    var(--color-white),
+    var(--color-white)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400% 400%;
+  animation: gradient 3s ease-in-out;
+}
+
+.adeola-anim {
+  background: linear-gradient(
+    -45deg,
+    var(--color-light-blue),
+    var(--color-light-purple),
+    var(--color-white),
+    var(--color-white)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400% 400%;
+  line-height: 105%;
+  animation: gradient 3s ease-in-out;
 }
 
 .about-text {
@@ -45,7 +104,6 @@
   color: var(--color-gray);
   display: block;
   padding: 0 6rem;
-
 }
 
 .paragraph {
@@ -54,6 +112,6 @@
   color: var(--color-gray);
 
   &__sub {
-    color: #8B8B8B;
+    color: #8b8b8b;
   }
 }

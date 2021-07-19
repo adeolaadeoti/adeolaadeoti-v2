@@ -31,6 +31,12 @@ const index: React.FC<indexProps> = ({}) => {
       },
     });
 
+    window.addEventListener("load", (event) => {
+      var image = document.querySelector("img");
+      var isLoaded = image.complete && image.naturalHeight !== 0;
+      lscroll.update();
+    });
+
     Array.from(document.querySelectorAll(".project-card__middle")).forEach(
       (el: any) => {
         const imgs: any = Array.from(el.querySelectorAll("img"));
@@ -76,6 +82,7 @@ const index: React.FC<indexProps> = ({}) => {
           isOpen={isToggleOpen}
           toggleOpen={() => toggleBodyScroll(isToggleOpen)}
         />
+        <div id="blot"></div>
         <div className="header-wrapper">
           <header className="header">
             <div className="header__hero">
@@ -203,7 +210,13 @@ const index: React.FC<indexProps> = ({}) => {
                 <img src="webp/alexxandria-2.webp" alt="alexxandria logo" />
               </div>
               <div className="project-card__right">
-                <h2 className="heading-2">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="alexxandria-anim"
+                  className="heading-2"
+                >
                   Alexxandria
                   <br /> Forque
                 </h2>
@@ -238,7 +251,15 @@ const index: React.FC<indexProps> = ({}) => {
                 <img src="webp/pixelchef-2.webp" alt="pixelchef logo" />
               </div>
               <div className="project-card__right">
-                <h2 className="heading-2">PixelChef</h2>
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="pixelchef-anim"
+                  className="heading-2"
+                >
+                  PixelChef
+                </h2>
                 <a href="#" className="project-card__link">
                   VISIT THE WEBSITE
                 </a>
@@ -270,7 +291,13 @@ const index: React.FC<indexProps> = ({}) => {
                 <img src="webp/heatrow-2.webp" alt="heatrow logo" />
               </div>
               <div className="project-card__right">
-                <h2 className="heading-2">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="heatrow-anim"
+                  className="heading-2"
+                >
                   Heatrow
                   <br /> Estate
                 </h2>
@@ -305,7 +332,13 @@ const index: React.FC<indexProps> = ({}) => {
                 <img src="webp/adeola-2.webp" alt="adeola logo" />
               </div>
               <div className="project-card__right">
-                <h2 className="heading-2">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="adeola-anim"
+                  className="heading-2"
+                >
                   AdeolaAdeoti
                   <br /> version 1
                 </h2>
@@ -720,7 +753,6 @@ const index: React.FC<indexProps> = ({}) => {
             </a>
           </div>
         </footer>
-
       </div>
     </>
   );

@@ -454,11 +454,8 @@
 .footer {
   @include centerContent;
   width: 100%;
-  margin-top: 14rem;
-  padding-left: 6rem;
-  padding-right: 6rem;
-  padding-top: 4rem;
-  padding-bottom: 0rem;
+  margin-top: 12rem;
+  padding: 3rem 6rem;
   border-top: 1px solid rgba(#c4c4c4, 0.25);
   &__socials {
     @include centerContent;
@@ -510,3 +507,4 @@
 .speaker__toggle--anim {
   left: 54%;
 }
+

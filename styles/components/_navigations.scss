@@ -64,6 +64,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  overflow: hidden;
   height: 100vh;
   background-color: #050810;
   color: var(--color-white);
@@ -119,11 +120,8 @@
   text-align: center;
 
   &__projects {
-    margin-top: 5rem;
+    margin-top: 10rem;
     @include centerContent;
-    position: absolute;
-    bottom: -5rem;
-    width: 75vw;
     &-card {
       width: 38.5rem;
       height: 28.8rem;
@@ -135,9 +133,13 @@
       letter-spacing: -0.085em;
       transition: all 0.3s ease-in-out;
 
+      &:not(:last-child) {
+        margin-right: 4rem;
+      }
+
       &:hover {
         width: 41.5rem;
-        height: 31.8rem;  
+        height: 31.8rem;
         img {
           opacity: 0.5;
         }

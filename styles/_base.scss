@@ -37,11 +37,15 @@ body {
   font-size: 1.6rem;
   overflow-x: hidden;
   background: linear-gradient(
-    145.23deg,
-    #1a1e2b 10.44%,
-    #10101a 31.16%,
-    #1a1e2b 60.49%
+    115deg,
+    #1a1e2b,
+    #10101a,
+    #1a1e2b,
+    #10101a,
   );
+  background-size: 400% 400%;
+  animation: gradient 10s ease-in-out infinite alternate;
+
 }
 
 .container {

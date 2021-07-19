@@ -3,9 +3,22 @@ import { motion } from "framer-motion";
 
 const openTransition = {
   duration: 1.1,
-  delay: 1.5,
+  delay: 1.2,
   ease: [0.6, 0.01, -0.05, 0.9],
 };
+
+const openTopTransition = {
+  duration: 1.1,
+  delay: 1.3,
+  ease: [0.6, 0.01, -0.05, 0.9],
+};
+
+const openBottomTransition = {
+  duration: 1.1,
+  delay: 1.7,
+  ease: [0.6, 0.01, -0.05, 0.9],
+};
+
 const closedTansition = {
   duration: 1,
   ease: [0.6, 0.01, -0.05, 0.9],
@@ -26,7 +39,14 @@ export const MobileNavigation = ({ variants, isOpen }: any) => (
           : { opacity: 0, transition: closedTansition }
       }
     >
-      <div className="navigation-top">
+      <motion.div
+        animate={
+          isOpen
+            ? { opacity: 1, transition: openTopTransition }
+            : { opacity: 0, transition: closedTansition }
+        }
+        className="navigation-top"
+      >
         <div className="navigation-top__left">
           <h4 className="navigation-h4">DONT BE A STRANGER</h4>
           <div className="navigation-top__left--links">
@@ -54,9 +74,13 @@ export const MobileNavigation = ({ variants, isOpen }: any) => (
             Tell me about it
           </a>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="navigation-bottom">
+      <motion.div animate={
+          isOpen
+            ? { opacity: 1, transition: openBottomTransition }
+            : { opacity: 0, transition: closedTansition }
+        } className="navigation-bottom">
         <h4 className="navigation-h4">FEATURED PROJECTS</h4>
         <div className="navigation-bottom__projects">
           <a
@@ -64,7 +88,7 @@ export const MobileNavigation = ({ variants, isOpen }: any) => (
             target="_blank"
             className="navigation-bottom__projects-card"
           >
-            <img src="webp/alexxandria-1.webp" alt="alexxandria" />
+            <img src="webp/alexxandria-nav.webp" alt="alexxandria" />
             <h2>
               Alexxandria
               <br />
@@ -76,7 +100,7 @@ export const MobileNavigation = ({ variants, isOpen }: any) => (
             target="_blank"
             className="navigation-bottom__projects-card"
           >
-            <img src="webp/pixelchef-1.webp" alt="pixelChef" />
+            <img src="webp/pixelchef-nav.webp" alt="pixelChef" />
             <h2>PixelChef</h2>
           </a>
           <a
@@ -92,7 +116,7 @@ export const MobileNavigation = ({ variants, isOpen }: any) => (
             </h2>
           </a>
         </div>
-      </div>
+      </motion.div>
     </motion.div>
   </motion.div>
 );
