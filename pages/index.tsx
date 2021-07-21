@@ -32,7 +32,7 @@ const index: React.FC<indexProps> = ({}) => {
     });
 
     // update locomotive scroll
-    window.addEventListener("load", (event: any) => {
+    window.addEventListener("load", () => {
       let image = document.querySelector("img");
       let isLoaded = image.complete && image.naturalHeight !== 0;
       lscroll.update();
