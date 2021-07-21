@@ -106,7 +106,7 @@ const index: React.FC<indexProps> = ({}) => {
           />
           <meta
             property="og:image"
-            itemprop="image"
+            // itemprop="image"
             content="img/png/card.png"
           />
           <meta property="og:type" content="website" />
