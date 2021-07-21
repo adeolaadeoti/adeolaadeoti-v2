@@ -23,12 +23,12 @@ const index: React.FC<indexProps> = ({}) => {
     lscroll = new locomotiveScroll({
       el: refScroll.current,
       smooth: true,
-      // smartphone: {
-      //   smooth: true,
-      // },
-      // tablet: {
-      //   smooth: true,
-      // },
+      smartphone: {
+        smooth: true,
+      },
+      tablet: {
+        smooth: true,
+      },
     });
 
     // update locomotive scroll
