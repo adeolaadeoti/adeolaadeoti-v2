@@ -23,6 +23,8 @@ const index: React.FC<indexProps> = ({}) => {
     lscroll = new locomotiveScroll({
       el: refScroll.current,
       smooth: true,
+      inertia: 0.3,
+      multiplier: 0.65,
       smartphone: {
         smooth: true,
       },
@@ -99,7 +101,10 @@ const index: React.FC<indexProps> = ({}) => {
           />
           {/* <!--w --> */}
           <meta property="og:site_name" content="adeolaadeoti.com" />
-          <meta property="og:title" content="Adeola Adeoti &mdsdh; Frontend Developer" />
+          <meta
+            property="og:title"
+            content="Adeola Adeoti &mdsdh; Frontend Developer"
+          />
           <meta
             property="og:description"
             content="I’m a design minded front-end developer based in Lagos, Nigeria."
