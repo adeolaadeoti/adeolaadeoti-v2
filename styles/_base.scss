@@ -31,7 +31,7 @@ html {
     font-size: 46%;
   }
 
-  @media only screen and (min-width: 112.5em) {
+  @media only screen and (min-width: 140.5em) {
     font-size: 75%;
   }
 }
@@ -40,9 +40,10 @@ body {
   font-family: $font-primary, sans-serif;
   font-size: 1.6rem;
   overflow-x: hidden;
-  background: linear-gradient(115deg, #1a1e2b, #10101a, #1a1e2b, #10101a);
+  // background: linear-gradient(115deg, #1a1e2b, #10101a, #1a1e2b, #10101a);
+  background: #10101a;
   background-size: 400% 400%;
-  animation: gradient 3s ease-in-out infinite alternate;
+  // animation: gradient 3s ease-in-out infinite alternate;
 }
 
 .container {
@@ -70,14 +71,12 @@ body {
   }
 }
 
-
 .smooth-scroll-wrapper {
   position: relative;
   width: 100vw;
   will-change: transform;
   transition: transform 0.25s;
 }
-
 
 /*! locomotive-scroll v4.1.1 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
 html.has-scroll-smooth {

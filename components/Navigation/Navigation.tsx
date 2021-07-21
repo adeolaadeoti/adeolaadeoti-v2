@@ -29,14 +29,17 @@ export const Navigation = ({ isOpen, toggleOpen }: any) => {
     <motion.div
       initial={false}
       animate={isOpen ? "open" : "closed"}
+      data-scroll
+      data-scroll-sticky
+      data-scroll-target="#menu-target"
       className="navigation-wrapper"
     >
       {/* <div className="menu-background"></div> */}
       <MobileNavigation variants={variants} isOpen={isOpen} />
       <div
-        data-scroll
-        data-scroll-sticky
-        data-scroll-target="#menu-target"
+        // data-scroll
+        // data-scroll-sticky
+        // data-scroll-target="#menu-target"
         className="menu-top"
       >
         <Link href="/">

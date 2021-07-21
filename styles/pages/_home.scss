@@ -167,11 +167,12 @@
   .project-card {
     width: 80%;
     margin: 20rem auto;
-    background: linear-gradient(
-      180deg,
-      rgba(35, 37, 49, 0.5) 0%,
-      rgba(15, 15, 24, 0.5) 100%
-    );
+    // background: linear-gradient(
+    //   180deg,
+    //   rgba(35, 37, 49, 0.5) 0%,
+    //   rgba(15, 15, 24, 0.5) 100%
+    // );
+    background: rgba(15, 15, 24, 0.5) 100%;
     border: 0.2rem solid #20222e;
     box-sizing: border-box;
     backdrop-filter: blur(54px);
@@ -278,7 +279,6 @@
           writing-mode: lr-tb;
           margin-top: 3rem;
           margin-bottom: 2rem;
-
         }
       }
     }

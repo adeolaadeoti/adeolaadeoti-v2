@@ -22,6 +22,10 @@
     backdrop-filter: blur(104px);
     border-radius: 2rem;
 
+    @media only screen and (max-width: 40em) {
+      width: 70%;
+    }
+
     .brand-logo {
       display: flex;
       justify-content: space-between;
@@ -37,6 +41,12 @@
       color: var(--color-gray);
       font-family: $font-tertiary;
 
+      @media only screen and (max-width: 40em) {
+        span {
+          display: none;
+        }
+      }
+
       .toggle-button {
         background: transparent;
         outline: none;
@@ -48,14 +58,17 @@
 }
 
 .brand-logo {
-  &__icon {
-  }
+  // &__icon {
+  // }
   &__text-wrapper {
     overflow: hidden;
     margin-left: 1rem;
   }
   &__text {
     animation: logoLeftAnim 15s cubic-bezier(1, 0, 0, 1) infinite;
+    @media only screen and (max-width: 40em) {
+      display: none;
+    }
   }
 }
 

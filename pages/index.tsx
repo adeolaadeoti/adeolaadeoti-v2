@@ -23,8 +23,11 @@ const index: React.FC<indexProps> = ({}) => {
     lscroll = new locomotiveScroll({
       el: refScroll.current,
       smooth: true,
-      inertia: 0.3,
-      multiplier: 0.65,
+      inertia: 0.2,
+      getSpeed: true,
+      getDirection: true,
+      reloadOnContextChange: true,
+      // multiplier: 0.65,
       smartphone: {
         smooth: true,
       },
