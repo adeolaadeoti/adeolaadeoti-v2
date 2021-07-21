@@ -34,8 +34,9 @@ const index: React.FC<indexProps> = ({}) => {
     // update locomotive scroll
     window.addEventListener("load", () => {
       let image = document.querySelector("img");
-      let isLoaded = image.complete && image.naturalHeight !== 0;
+      const isLoaded = image!.complete && image!.naturalHeight !== 0;
       lscroll.update();
+      console.log(isLoaded)
     });
 
     // image hover effect
@@ -61,7 +62,7 @@ const index: React.FC<indexProps> = ({}) => {
     // header cursor
     const cursor = document.querySelector(".cursor");
     window.onmousemove = (e) => {
-      cursor.setAttribute("style", `top: ${e.pageY}px; left: ${e.pageX}px;`);
+      cursor!.setAttribute("style", `top: ${e.pageY}px; left: ${e.pageX}px;`);
     };
 
     console.clear();

@@ -436,16 +436,16 @@
         &__top {
           @include centerContent;
           margin-bottom: 3rem;
-          &--left {
-          }
-          &--right {
-            img {
-            }
-          }
+          // &--left {
+          // }
+          // &--right {
+          //   img {
+          //   }
+          // }
         }
 
-        &__bottom {
-        }
+        // &__bottom {
+        // }
 
         &__p {
           font-size: 0.8rem;
@@ -608,8 +608,8 @@
     cursor: pointer;
     z-index: 2;
   }
-  &__muted {
-  }
+  // &__muted {
+  // }
   &__unmuted {
     transform: rotate(180deg);
     .rect1-anim {
