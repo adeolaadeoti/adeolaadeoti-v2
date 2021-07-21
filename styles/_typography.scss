@@ -5,6 +5,12 @@
     font-size: 5rem;
     letter-spacing: -0.03em;
     font-family: $font-secondary;
+    @media only screen and (max-width: 56.25em) {
+      font-size: 4.25rem;
+    }
+    @media only screen and (max-width: 37.5em) {
+      font-size: 3.5rem;
+    }
     span {
       margin-right: 1rem;
       background-image: linear-gradient(to right, #b0f3f1, #ffcfdf);
@@ -29,6 +35,15 @@
     letter-spacing: -0.03em;
     color: var(--color-white);
     font-family: $font-secondary;
+    @media only screen and (max-width: 57em) {
+      line-height: 125%;
+    }
+    @media only screen and (max-width: 56.25em) {
+      font-size: 3.5rem;
+    }
+    // @media only screen and (max-width: 37.5em) {
+    //   font-size: 3.5rem;
+    // }
     &__sub {
     }
   }
@@ -37,8 +52,8 @@
 .alexxandria-anim {
   background: linear-gradient(
     -45deg,
-    #63898A,
-    #9FBCBF,
+    #63898a,
+    #9fbcbf,
     var(--color-white),
     var(--color-white)
   );
@@ -48,6 +63,10 @@
   background-size: 400% 400%;
   line-height: 105%;
   animation: gradient 3s ease-in-out;
+
+  @media only screen and (max-width: 57em) {
+    line-height: 125%;
+  }
 }
 
 .pixelchef-anim {
@@ -104,6 +123,14 @@
   color: var(--color-gray);
   display: block;
   padding: 0 6rem;
+
+  @media only screen and (max-width: 56.25em) {
+    grid-column: 1/15;
+    padding: 0 4rem;
+    br {
+      display: none;
+    }
+  }
 }
 
 .paragraph {

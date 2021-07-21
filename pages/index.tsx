@@ -44,7 +44,9 @@ const index: React.FC<indexProps> = ({}) => {
         const imgs: any = Array.from(el.querySelectorAll("img"));
         new hoverEffect({
           parent: el,
-          intensity: el.dataset.intensity || undefined,
+          // angle2: Math.PI / 2,
+          // imagesRatio: 512 / 512,
+          intensity: 0.2,
           speedIn: el.dataset.speedin || undefined,
           speedOut: el.dataset.speedout || undefined,
           easing: el.dataset.easing || undefined,
@@ -61,7 +63,11 @@ const index: React.FC<indexProps> = ({}) => {
     window.onmousemove = (e) => {
       cursor.setAttribute("style", `top: ${e.pageY}px; left: ${e.pageX}px;`);
     };
+
+    console.clear();
+    console.log("object");
   }, []);
+
 
   function handleSpeaker() {
     if (speakerState === "muted") {
@@ -97,7 +103,7 @@ const index: React.FC<indexProps> = ({}) => {
               <div className="header__hero--heading">
                 <span>turning ideas into </span> <br />
                 <span>real life </span>
-                <span className="header__hero--heading-gradient">products</span>
+                <span className="header__hero--heading-gradient">products </span>
                 <br />
                 <span>is my calling.</span>
               </div>
@@ -210,9 +216,6 @@ const index: React.FC<indexProps> = ({}) => {
               <div
                 className="project-card__middle"
                 data-displacement="webp/myDistorsionImage.webp"
-                data-intensity="0.2"
-                data-speedIn="1.6"
-                data-speedOut="1.6"
               >
                 <img src="webp/alexxandria-1.webp" alt="alexxandria model" />
                 <img src="webp/alexxandria-2.webp" alt="alexxandria logo" />
@@ -249,9 +252,6 @@ const index: React.FC<indexProps> = ({}) => {
               <div
                 className="project-card__middle"
                 data-displacement="webp/myDistorsionImage.webp"
-                data-intensity="0.2"
-                data-speedIn="1.6"
-                data-speedOut="1.6"
               >
                 <img src="webp/pixelchef-1.webp" alt="pixelchef" />
                 <img src="webp/pixelchef-2.webp" alt="pixelchef logo" />
@@ -289,9 +289,6 @@ const index: React.FC<indexProps> = ({}) => {
               <div
                 className="project-card__middle"
                 data-displacement="webp/myDistorsionImage.webp"
-                data-intensity="0.2"
-                data-speedIn="1.6"
-                data-speedOut="1.6"
               >
                 <img src="webp/heatrow-1.webp" alt="heatrow" />
                 <img src="webp/heatrow-2.webp" alt="heatrow logo" />
@@ -328,9 +325,6 @@ const index: React.FC<indexProps> = ({}) => {
               <div
                 className="project-card__middle"
                 data-displacement="webp/myDistorsionImage.webp"
-                data-intensity="0.2"
-                data-speedIn="1.6"
-                data-speedOut="1.6"
               >
                 <img src="webp/adeola-1.webp" alt="adeola model" />
                 <img src="webp/adeola-2.webp" alt="adeola logo" />

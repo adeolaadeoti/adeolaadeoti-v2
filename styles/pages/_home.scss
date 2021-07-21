@@ -13,12 +13,16 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url("../../public/webp/hand-left.webp");
+    @media only screen and (max-width: 45em) {
+      width: 20rem;
+      height: 20rem;
+    }
   }
   &::after {
     content: "";
     display: block;
     position: absolute;
-    bottom: 10rem;
+    bottom: 7rem;
     right: 0rem;
     width: 25rem;
     height: 45rem;
@@ -26,6 +30,11 @@
     background-size: contain;
     background-image: url("../../public/webp/hand-right.webp");
     z-index: -1;
+
+    @media only screen and (max-width: 45em) {
+      width: 20rem;
+      height: 40rem;
+    }
   }
 }
 
@@ -33,6 +42,11 @@
   grid-column: 2/14;
   margin-top: 25rem;
   padding: 0 6rem;
+
+  @media only screen and (max-width: 45em) {
+    grid-column: 1/15;
+    padding: 0 4rem;
+  }
 
   &__hero {
     &--heading {
@@ -42,7 +56,14 @@
       letter-spacing: -0.03em;
       color: var(--color-white);
       position: relative;
-      span {
+      @media only screen and (max-width: 45em) {
+        font-size: 7rem;
+        br {
+          display: none;
+        }
+      }
+      @media only screen and (max-width: 28em) {
+        font-size: 6rem;
       }
 
       &-gradient {
@@ -101,6 +122,10 @@
     margin-bottom: 14rem;
     color: var(--color-gray);
 
+    @media only screen and (max-width: 57em) {
+      padding: 0 4rem;
+    }
+
     &--right {
       width: 20rem;
       @include centerContent;
@@ -127,6 +152,13 @@
   margin-top: 20rem;
   padding: 0 6rem;
 
+  @media only screen and (max-width: 57em) {
+    grid-column: 1/15;
+  }
+  @media only screen and (max-width: 45em) {
+    padding: 0 4rem;
+  }
+
   p {
     margin-bottom: 15rem;
     margin-top: 2rem;
@@ -144,11 +176,33 @@
     box-sizing: border-box;
     backdrop-filter: blur(54px);
     border-radius: 7.3rem;
-
     display: flex;
     align-items: center;
     padding: 6rem;
     position: relative;
+
+    @media only screen and (max-width: 57em) {
+      width: 70%;
+      border-radius: 6.3rem;
+      flex-direction: column;
+    }
+    @media only screen and (max-width: 40em) {
+      width: 75%;
+    }
+    @media only screen and (max-width: 35em) {
+      width: 80%;
+    }
+    @media only screen and (max-width: 30em) {
+      padding: 4rem;
+      width: 84%;
+      border-radius: 4.3rem;
+    }
+    @media only screen and (max-width: 23em) {
+      width: 90%;
+    }
+    @media only screen and (max-width: 22em) {
+      width: 100%;
+    }
 
     &::before {
       content: "";
@@ -160,6 +214,13 @@
       height: 15rem;
       background-repeat: no-repeat;
       background-size: contain;
+
+      @media only screen and (max-width: 57em) {
+        top: -3rem;
+        right: -3rem;
+        width: 12rem;
+        height: 12rem;
+      }
     }
 
     &:nth-of-type(1) {
@@ -197,6 +258,12 @@
 
     &__left {
       margin-right: 6rem;
+      @media only screen and (max-width: 57em) {
+        order: 2;
+
+        display: flex;
+        align-self: flex-start;
+      }
       h4 {
         transform: rotate(180deg);
         writing-mode: tb-rl;
@@ -205,6 +272,14 @@
         line-height: 92.4%;
         letter-spacing: 0.19em;
         color: #8b8b8b;
+        line-height: 120%;
+        @media only screen and (max-width: 57em) {
+          transform: rotate(360deg);
+          writing-mode: lr-tb;
+          margin-top: 3rem;
+          margin-bottom: 2rem;
+
+        }
       }
     }
     &__middle {
@@ -215,10 +290,21 @@
       border-radius: 5.3rem;
       overflow: hidden;
 
+      @media only screen and (max-width: 57em) {
+        order: 1;
+        border-radius: 4.5rem;
+      }
+      @media only screen and (max-width: 30em) {
+        width: 30rem;
+        border-radius: 3rem;
+      }
+
       canvas {
         position: absolute;
-        border-radius: 6px;
+        // border-radius: inherit !important;
         z-index: 0;
+        width: 100% !important;
+        height: 100% !important;
       }
 
       img {
@@ -249,8 +335,19 @@
     }
     &__right {
       margin-left: 6rem;
+      @media only screen and (max-width: 57em) {
+        margin-left: 0rem;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        order: 3;
+        margin-top: 2rem;
+      }
       h2 {
         margin-bottom: 6rem;
+        @media only screen and (max-width: 57em) {
+          margin-bottom: 3rem;
+        }
       }
     }
     &__link {
@@ -286,6 +383,11 @@
       align-items: center;
       justify-content: space-between;
       width: 5rem;
+
+      @media only screen and (max-width: 57em) {
+        width: 6.5rem;
+        margin-top: 7rem;
+      }
     }
   }
 }
@@ -305,6 +407,14 @@
   &__top {
     grid-column: 2/14;
     padding: 0 6rem;
+
+    @media only screen and (max-width: 57em) {
+      grid-column: 1/15;
+    }
+    @media only screen and (max-width: 45em) {
+      padding: 0 4rem;
+    }
+
     p {
       margin-top: 1.5rem;
     }
@@ -386,6 +496,13 @@
   padding: 0 6rem;
   margin-top: 12rem;
 
+  @media only screen and (max-width: 57em) {
+    grid-column: 1/15;
+  }
+  @media only screen and (max-width: 45em) {
+    padding: 0 4rem;
+  }
+
   &__h2 {
     font-size: 4.5rem;
     line-height: 130.4%;
@@ -393,6 +510,13 @@
     color: var(--color-gray);
     font-weight: 100;
     margin-top: 4rem;
+
+    @media only screen and (max-width: 56.25em) {
+      font-size: 4rem;
+    }
+    @media only screen and (max-width: 37.5em) {
+      font-size: 3rem;
+    }
 
     a {
       color: var(--color-white);
@@ -412,6 +536,13 @@
   grid-column: 2/14;
   padding: 0 6rem;
   margin-top: 12rem;
+
+  @media only screen and (max-width: 57em) {
+    grid-column: 1/15;
+  }
+  @media only screen and (max-width: 45em) {
+    padding: 0 4rem;
+  }
 
   p {
     margin-top: 2rem;
@@ -444,6 +575,11 @@
   margin-top: 12rem;
   padding: 3rem 6rem;
   border-top: 1px solid rgba(#c4c4c4, 0.25);
+
+  @media only screen and (max-width: 45em) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
   &__socials {
     @include centerContent;
     width: 6rem;
@@ -494,4 +630,3 @@
 .speaker__toggle--anim {
   left: 54%;
 }
-

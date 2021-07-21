@@ -8,7 +8,8 @@
 }
 
 html {
-  font-size: 62.5%; // 10px
+  // font-size: 62.5%; 
+  font-size: 58%; 
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -16,15 +17,18 @@ html {
   scroll-behavior: smooth;
 
   @media only screen and (max-width: 62.5em) {
-    font-size: 56.25%;
+    // font-size: 56.25%;
+    font-size: 51.25%;
   }
 
   @media only screen and (max-width: 56.25em) {
-    font-size: 54%;
+    // font-size: 54%;
+    font-size: 49%;
   }
 
   @media only screen and (max-width: 37.5em) {
-    font-size: 51%;
+    // font-size: 51%;
+    font-size: 46%;
   }
 
   @media only screen and (min-width: 112.5em) {
