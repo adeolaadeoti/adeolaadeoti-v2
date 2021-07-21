@@ -23,12 +23,12 @@ const index: React.FC<indexProps> = ({}) => {
     lscroll = new locomotiveScroll({
       el: refScroll.current,
       smooth: true,
-      smartphone: {
-        smooth: true,
-      },
-      tablet: {
-        smooth: true,
-      },
+      // smartphone: {
+      //   smooth: true,
+      // },
+      // tablet: {
+      //   smooth: true,
+      // },
     });
 
     // update locomotive scroll
@@ -36,7 +36,7 @@ const index: React.FC<indexProps> = ({}) => {
       let image = document.querySelector("img");
       const isLoaded = image!.complete && image!.naturalHeight !== 0;
       lscroll.update();
-      console.log(isLoaded)
+      console.log(isLoaded);
     });
 
     // image hover effect
@@ -69,7 +69,6 @@ const index: React.FC<indexProps> = ({}) => {
     console.log("object");
   }, []);
 
-
   function handleSpeaker() {
     if (speakerState === "muted") {
       setSpeakerState("unmuted");
@@ -92,6 +91,37 @@ const index: React.FC<indexProps> = ({}) => {
         <Head>
           <title>Adeola Adeoti &mdash; Frontend Devloper</title>
           <link rel="icon" href="svg/favicon.svg" />
+          <meta name="theme-color" content="#10101A" />
+          <meta name="description" content="Adeola Adeoti Portfolio" />
+          <meta
+            name="Keywords"
+            content="Adeola Adeoti, Portfolio, Front-End Developer, Developer, Software Engineer, Nigeria, Lagos"
+          />
+          {/* <!--w --> */}
+          <meta property="og:site_name" content="adeolaadeoti.com" />
+          <meta property="og:title" content="Adeola Adeoti &mdsdh; Frontend Developer" />
+          <meta
+            property="og:description"
+            content="I’m a design minded front-end developer based in Lagos, Nigeria."
+          />
+          <meta
+            property="og:image"
+            itemprop="image"
+            content="img/png/card.png"
+          />
+          <meta property="og:type" content="website" />
+
+          {/* <!--t --> */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@adeolajs" />
+          <meta name="twitter:creator" content="@adeolajs" />
+          <meta name="twitter:title" content="adeolaadeoti.com" />
+          <meta
+            name="twitter:description"
+            content="I’m a design minded front-end developer based in Lagos, Nigeria."
+          />
+          <meta name="twitter:image" content="img/png/card.png" />
+          <meta name="twitter:app:country" content="NG" />
         </Head>
         <div className="cursor"></div>
         <Navigation
@@ -104,7 +134,9 @@ const index: React.FC<indexProps> = ({}) => {
               <div className="header__hero--heading">
                 <span>turning ideas into </span> <br />
                 <span>real life </span>
-                <span className="header__hero--heading-gradient">products </span>
+                <span className="header__hero--heading-gradient">
+                  products{" "}
+                </span>
                 <br />
                 <span>is my calling.</span>
               </div>
