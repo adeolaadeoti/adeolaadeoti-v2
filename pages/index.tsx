@@ -61,7 +61,7 @@ const index: React.FC<indexProps> = ({}) => {
 
     // header cursor
     const cursor = document.querySelector(".cursor");
-    window.onmousemove = (e) => {
+    window.onmousemove = (e: any) => {
       cursor!.setAttribute("style", `top: ${e.pageY}px; left: ${e.pageX}px;`);
     };
 
