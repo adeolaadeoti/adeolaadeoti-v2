@@ -3,6 +3,8 @@ import Head from "next/head";
 import { motion } from "framer-motion";
 import { Navigation } from "../components/Navigation/Navigation";
 import useSwr from "swr";
+import ReactGa from "react-ga";
+
 
 interface indexProps {}
 
@@ -37,6 +39,9 @@ const index: React.FC<indexProps> = ({}) => {
   let lscroll: any;
 
   React.useEffect(() => {
+    ReactGa.initialize("G-PL2FZ55L9F");
+    ReactGa.pageview(window.location.pathname + window.location.search);
+
     if (!refScroll.current) return;
     // @ts-ignore
     lscroll = new locomotiveScroll({

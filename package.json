@@ -15,7 +15,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "swr": "^0.1.18",
-    "sass": "^1.26.3"
+    "sass": "^1.26.3",
+    "react-ga": "^3.1.2"
   },
   "devDependencies": {
     "@types/node": "^12.12.21",
