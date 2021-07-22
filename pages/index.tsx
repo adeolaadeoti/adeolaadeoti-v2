@@ -2,8 +2,16 @@ import React, { useState } from "react";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { Navigation } from "../components/Navigation/Navigation";
+import useSwr from "swr";
 
 interface indexProps {}
+
+interface Ireply {
+  id: number;
+  name: string;
+  userName: string;
+  reply: string;
+}
 
 const locomotiveScroll =
   typeof window !== `undefined` ? require("locomotive-scroll").default : null;
@@ -16,9 +24,16 @@ const transition: { duration: number; ease: number[] } = {
   ease: [0.6, 0.01, -0.05, 0.9],
 };
 
+const fetcher = (url: any) => fetch(url).then((res) => res.json());
+
 const index: React.FC<indexProps> = ({}) => {
   const [speakerState, setSpeakerState] = useState("muted");
   const [isToggleOpen, setIsToggleOpen] = useState<boolean>(false);
+  const { data: reviews, error } = useSwr("/api/tweets", fetcher);
+
+  console.log(reviews);
+
+  if (error) console.log(error);
 
   const refScroll = React.useRef(null);
   let lscroll: any;
@@ -94,42 +109,16 @@ const index: React.FC<indexProps> = ({}) => {
     <>
       <div id="menu-target" data-scroll-container ref={refScroll}>
         <Head>
-          <title>Adeola Adeoti &mdash; Frontend Devloper</title>
+          <title>Adeola Adeoti 🚀 &mdash; Frontend Devloper</title>
           <link rel="icon" href="svg/favicon.svg" />
           <meta name="theme-color" content="#10101A" />
-          <meta name="description" content="Adeola Adeoti Portfolio" />
-          <meta
-            name="Keywords"
-            content="Adeola Adeoti, Portfolio, Front-End Developer, Developer, Software Engineer, Nigeria, Lagos"
-          />
-          {/* <!--w --> */}
-          <meta property="og:site_name" content="adeolaadeoti.com" />
-          <meta
-            property="og:title"
-            content="Adeola Adeoti &mdsdh; Frontend Developer"
-          />
-          <meta
-            property="og:description"
-            content="I’m a design minded front-end developer based in Lagos, Nigeria."
-          />
-          <meta
-            property="og:image"
-            // itemprop="image"
-            content="img/png/card.png"
-          />
+          <meta name="apple-mobile-web-app-status-bar-style" content="#10101A" />
           <meta property="og:type" content="website" />
-
-          {/* <!--t --> */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content="@adeolajs" />
-          <meta name="twitter:creator" content="@adeolajs" />
-          <meta name="twitter:title" content="adeolaadeoti.com" />
-          <meta
-            name="twitter:description"
-            content="I’m a design minded front-end developer based in Lagos, Nigeria."
-          />
-          <meta name="twitter:image" content="img/png/card.png" />
-          <meta name="twitter:app:country" content="NG" />
+          <meta property="og:title" content="Adeola Adeoti 🚀 &mdash; Frontend Devloper" />
+          <meta name="twitter:title" content="Adeola Adeoti 🚀 &mdash; Frontend Devloper" />
+          <meta name="description" content="I'm a self-taught Front End Developer and turning ideas into real life products is my calling." />
+          <meta property="og:description" content="I'm a self-taught Front End Developer and turning ideas into real life products is my calling." />
+          <meta name="twitter:description" content="I'm a self-taught Front End Developer and turning ideas into real life products is my calling." />
         </Head>
         <audio loop id="audioPlayer" autoPlay style={{ display: "none" }}>
           <source src="sound/preloader.mp3" type="audio/mp3" />
@@ -476,328 +465,40 @@ const index: React.FC<indexProps> = ({}) => {
             </div>
             <div className="section-reviews__bottom">
               <div className="section-reviews__bottom-wrapper review-card__anim1">
-                <div className="review-card">
-                  <div className="review-card__top">
-                    <div className="review-card__top--left">
-                      <p className="review-card__p">dodo activist</p>
-                      <h3 className="review-card__h3">@prollyadeola</h3>
+                {reviews?.data.map((review: Ireply) => (
+                  <div key={review.id} className="review-card">
+                    <div className="review-card__top">
+                      <div className="review-card__top--left">
+                        <p className="review-card__p">{review.name}</p>
+                        <h3 className="review-card__h3">{review.userName}</h3>
+                      </div>
+                      <div className="review-card__top--right">
+                        <img src="svg/twitter.svg" alt="twitter icon" />
+                      </div>
                     </div>
-                    <div className="review-card__top--right">
-                      <img src="svg/twitter.svg" alt="twitter icon" />
-                    </div>
-                  </div>
-                  <div className="review-card__bottom">
-                    <h2 className="review-card__h2">
-                      This is awesome man 🔥🔥☺️
-                    </h2>
-                  </div>
-                </div>
-                <div className="review-card">
-                  <div className="review-card__top">
-                    <div className="review-card__top--left">
-                      <p className="review-card__p">dodo activist</p>
-                      <h3 className="review-card__h3">@prollyadeola</h3>
-                    </div>
-                    <div className="review-card__top--right">
-                      <img src="svg/twitter.svg" alt="twitter icon" />
+                    <div className="review-card__bottom">
+                      <h2 className="review-card__h2">{review.reply}</h2>
                     </div>
                   </div>
-                  <div className="review-card__bottom">
-                    <h2 className="review-card__h2">
-                      This is awesome man 🔥🔥☺️
-                    </h2>
-                  </div>
-                </div>
-                <div className="review-card">
-                  <div className="review-card__top">
-                    <div className="review-card__top--left">
-                      <p className="review-card__p">dodo activist</p>
-                      <h3 className="review-card__h3">@prollyadeola</h3>
-                    </div>
-                    <div className="review-card__top--right">
-                      <img src="svg/twitter.svg" alt="twitter icon" />
-                    </div>
-                  </div>
-                  <div className="review-card__bottom">
-                    <h2 className="review-card__h2">
-                      This is awesome man 🔥🔥☺️
-                    </h2>
-                  </div>
-                </div>
-                <div className="review-card">
-                  <div className="review-card__top">
-                    <div className="review-card__top--left">
-                      <p className="review-card__p">dodo activist</p>
-                      <h3 className="review-card__h3">@prollyadeola</h3>
-                    </div>
-                    <div className="review-card__top--right">
-                      <img src="svg/twitter.svg" alt="twitter icon" />
-                    </div>
-                  </div>
-                  <div className="review-card__bottom">
-                    <h2 className="review-card__h2">
-                      This is awesome man 🔥🔥☺️
-                    </h2>
-                  </div>
-                </div>
-                <div className="review-card">
-                  <div className="review-card__top">
-                    <div className="review-card__top--left">
-                      <p className="review-card__p">dodo activist</p>
-                      <h3 className="review-card__h3">@prollyadeola</h3>
-                    </div>
-                    <div className="review-card__top--right">
-                      <img src="svg/twitter.svg" alt="twitter icon" />
-                    </div>
-                  </div>
-                  <div className="review-card__bottom">
-                    <h2 className="review-card__h2">
-                      This is awesome man 🔥🔥☺️
-                    </h2>
-                  </div>
-                </div>
-                <div className="review-card">
-                  <div className="review-card__top">
-                    <div className="review-card__top--left">
-                      <p className="review-card__p">dodo activist</p>
-                      <h3 className="review-card__h3">@prollyadeola</h3>
-                    </div>
-                    <div className="review-card__top--right">
-                      <img src="svg/twitter.svg" alt="twitter icon" />
-                    </div>
-                  </div>
-                  <div className="review-card__bottom">
-                    <h2 className="review-card__h2">
-                      This is awesome man 🔥🔥☺️
-                    </h2>
-                  </div>
-                </div>
-                <div className="review-card">
-                  <div className="review-card__top">
-                    <div className="review-card__top--left">
-                      <p className="review-card__p">dodo activist</p>
-                      <h3 className="review-card__h3">@prollyadeola</h3>
-                    </div>
-                    <div className="review-card__top--right">
-                      <img src="svg/twitter.svg" alt="twitter icon" />
-                    </div>
-                  </div>
-                  <div className="review-card__bottom">
-                    <h2 className="review-card__h2">
-                      This is awesome man 🔥🔥☺️
-                    </h2>
-                  </div>
-                </div>
-                <div className="review-card">
-                  <div className="review-card__top">
-                    <div className="review-card__top--left">
-                      <p className="review-card__p">dodo activist</p>
-                      <h3 className="review-card__h3">@prollyadeola</h3>
-                    </div>
-                    <div className="review-card__top--right">
-                      <img src="svg/twitter.svg" alt="twitter icon" />
-                    </div>
-                  </div>
-                  <div className="review-card__bottom">
-                    <h2 className="review-card__h2">
-                      This is awesome man 🔥🔥☺️
-                    </h2>
-                  </div>
-                </div>
-                <div className="review-card">
-                  <div className="review-card__top">
-                    <div className="review-card__top--left">
-                      <p className="review-card__p">dodo activist</p>
-                      <h3 className="review-card__h3">@prollyadeola</h3>
-                    </div>
-                    <div className="review-card__top--right">
-                      <img src="svg/twitter.svg" alt="twitter icon" />
-                    </div>
-                  </div>
-                  <div className="review-card__bottom">
-                    <h2 className="review-card__h2">
-                      This is awesome man 🔥🔥☺️
-                    </h2>
-                  </div>
-                </div>
-                <div className="review-card">
-                  <div className="review-card__top">
-                    <div className="review-card__top--left">
-                      <p className="review-card__p">dodo activist</p>
-                      <h3 className="review-card__h3">@prollyadeola</h3>
-                    </div>
-                    <div className="review-card__top--right">
-                      <img src="svg/twitter.svg" alt="twitter icon" />
-                    </div>
-                  </div>
-                  <div className="review-card__bottom">
-                    <h2 className="review-card__h2">
-                      This is awesome man 🔥🔥☺️
-                    </h2>
-                  </div>
-                </div>
+                ))}
               </div>
               <div className="section-reviews__bottom-wrapper review-card__anim2">
-                <div className="review-card">
-                  <div className="review-card__top">
-                    <div className="review-card__top--left">
-                      <p className="review-card__p">dodo activist</p>
-                      <h3 className="review-card__h3">@prollyadeola</h3>
+                {reviews?.data.sort().map((review: Ireply) => (
+                  <div key={review.id} className="review-card">
+                    <div className="review-card__top">
+                      <div className="review-card__top--left">
+                        <p className="review-card__p">{review.name}</p>
+                        <h3 className="review-card__h3">{review.userName}</h3>
+                      </div>
+                      <div className="review-card__top--right">
+                        <img src="svg/twitter.svg" alt="twitter icon" />
+                      </div>
                     </div>
-                    <div className="review-card__top--right">
-                      <img src="svg/twitter.svg" alt="twitter icon" />
-                    </div>
-                  </div>
-                  <div className="review-card__bottom">
-                    <h2 className="review-card__h2">
-                      This is awesome man 🔥🔥☺️
-                    </h2>
-                  </div>
-                </div>
-                <div className="review-card">
-                  <div className="review-card__top">
-                    <div className="review-card__top--left">
-                      <p className="review-card__p">dodo activist</p>
-                      <h3 className="review-card__h3">@prollyadeola</h3>
-                    </div>
-                    <div className="review-card__top--right">
-                      <img src="svg/twitter.svg" alt="twitter icon" />
+                    <div className="review-card__bottom">
+                      <h2 className="review-card__h2">{review.reply}</h2>
                     </div>
                   </div>
-                  <div className="review-card__bottom">
-                    <h2 className="review-card__h2">
-                      This is awesome man 🔥🔥☺️
-                    </h2>
-                  </div>
-                </div>
-                <div className="review-card">
-                  <div className="review-card__top">
-                    <div className="review-card__top--left">
-                      <p className="review-card__p">dodo activist</p>
-                      <h3 className="review-card__h3">@prollyadeola</h3>
-                    </div>
-                    <div className="review-card__top--right">
-                      <img src="svg/twitter.svg" alt="twitter icon" />
-                    </div>
-                  </div>
-                  <div className="review-card__bottom">
-                    <h2 className="review-card__h2">
-                      This is awesome man 🔥🔥☺️
-                    </h2>
-                  </div>
-                </div>
-                <div className="review-card">
-                  <div className="review-card__top">
-                    <div className="review-card__top--left">
-                      <p className="review-card__p">dodo activist</p>
-                      <h3 className="review-card__h3">@prollyadeola</h3>
-                    </div>
-                    <div className="review-card__top--right">
-                      <img src="svg/twitter.svg" alt="twitter icon" />
-                    </div>
-                  </div>
-                  <div className="review-card__bottom">
-                    <h2 className="review-card__h2">
-                      This is awesome man 🔥🔥☺️
-                    </h2>
-                  </div>
-                </div>
-                <div className="review-card">
-                  <div className="review-card__top">
-                    <div className="review-card__top--left">
-                      <p className="review-card__p">dodo activist</p>
-                      <h3 className="review-card__h3">@prollyadeola</h3>
-                    </div>
-                    <div className="review-card__top--right">
-                      <img src="svg/twitter.svg" alt="twitter icon" />
-                    </div>
-                  </div>
-                  <div className="review-card__bottom">
-                    <h2 className="review-card__h2">
-                      This is awesome man 🔥🔥☺️
-                    </h2>
-                  </div>
-                </div>
-                <div className="review-card">
-                  <div className="review-card__top">
-                    <div className="review-card__top--left">
-                      <p className="review-card__p">dodo activist</p>
-                      <h3 className="review-card__h3">@prollyadeola</h3>
-                    </div>
-                    <div className="review-card__top--right">
-                      <img src="svg/twitter.svg" alt="twitter icon" />
-                    </div>
-                  </div>
-                  <div className="review-card__bottom">
-                    <h2 className="review-card__h2">
-                      This is awesome man 🔥🔥☺️
-                    </h2>
-                  </div>
-                </div>
-                <div className="review-card">
-                  <div className="review-card__top">
-                    <div className="review-card__top--left">
-                      <p className="review-card__p">dodo activist</p>
-                      <h3 className="review-card__h3">@prollyadeola</h3>
-                    </div>
-                    <div className="review-card__top--right">
-                      <img src="svg/twitter.svg" alt="twitter icon" />
-                    </div>
-                  </div>
-                  <div className="review-card__bottom">
-                    <h2 className="review-card__h2">
-                      This is awesome man 🔥🔥☺️
-                    </h2>
-                  </div>
-                </div>
-                <div className="review-card">
-                  <div className="review-card__top">
-                    <div className="review-card__top--left">
-                      <p className="review-card__p">dodo activist</p>
-                      <h3 className="review-card__h3">@prollyadeola</h3>
-                    </div>
-                    <div className="review-card__top--right">
-                      <img src="svg/twitter.svg" alt="twitter icon" />
-                    </div>
-                  </div>
-                  <div className="review-card__bottom">
-                    <h2 className="review-card__h2">
-                      This is awesome man 🔥🔥☺️
-                    </h2>
-                  </div>
-                </div>
-                <div className="review-card">
-                  <div className="review-card__top">
-                    <div className="review-card__top--left">
-                      <p className="review-card__p">dodo activist</p>
-                      <h3 className="review-card__h3">@prollyadeola</h3>
-                    </div>
-                    <div className="review-card__top--right">
-                      <img src="svg/twitter.svg" alt="twitter icon" />
-                    </div>
-                  </div>
-                  <div className="review-card__bottom">
-                    <h2 className="review-card__h2">
-                      This is awesome man 🔥🔥☺️
-                    </h2>
-                  </div>
-                </div>
-                <div className="review-card">
-                  <div className="review-card__top">
-                    <div className="review-card__top--left">
-                      <p className="review-card__p">dodo activist</p>
-                      <h3 className="review-card__h3">@prollyadeola</h3>
-                    </div>
-                    <div className="review-card__top--right">
-                      <img src="svg/twitter.svg" alt="twitter icon" />
-                    </div>
-                  </div>
-                  <div className="review-card__bottom">
-                    <h2 className="review-card__h2">
-                      This is awesome man 🔥🔥☺️
-                    </h2>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </section>
@@ -848,10 +549,18 @@ const index: React.FC<indexProps> = ({}) => {
             alt="design and devloped by adeola"
           />
           <div className="footer__socials">
-            <a href="https://dribbble.com/adeolaadeoti" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://dribbble.com/adeolaadeoti"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src="svg/dribble.svg" alt="dribble logo" />
             </a>
-            <a href="https://github.com/adeolaadeoti" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/adeolaadeoti"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src="svg/github.svg" alt="github logo" />
             </a>
           </div>
