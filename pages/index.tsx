@@ -31,20 +31,15 @@ const index: React.FC<indexProps> = ({}) => {
       smooth: true,
       reloadOnContextChange: true,
       multiplier: 0.65,
-      // smartphone: {
-      //   smooth: true,
-      // },
-      // tablet: {
-      //   smooth: true,
-      // },
+      inertia: 0.3
     });
 
     // update locomotive scroll
     window.addEventListener("load", () => {
       let image = document.querySelector("img");
+    // @ts-ignore
       const isLoaded = image!.complete && image!.naturalHeight !== 0;
       lscroll.update();
-      console.log(isLoaded);
     });
 
     // image hover effect
@@ -75,21 +70,23 @@ const index: React.FC<indexProps> = ({}) => {
     console.log("object");
   }, []);
 
-  function handleSpeaker() {
+  const handleSpeaker = () => {
+    const audio = document.querySelector("#audioPlayer") as HTMLVideoElement;  
+
     if (speakerState === "muted") {
       setSpeakerState("unmuted");
+      audio.pause();
     } else {
       setSpeakerState("muted");
+      audio.play();
     }
-  }
+  };
 
   function toggleBodyScroll(isToggleOpen: boolean) {
     if (isToggleOpen === false) {
       setIsToggleOpen(true);
-      document.body.style.overflowY = "scroll";
     } else if (isToggleOpen === true) {
       setIsToggleOpen(false);
-      document.body.style.overflowY = "hidden";
     }
   }
 
@@ -134,7 +131,16 @@ const index: React.FC<indexProps> = ({}) => {
           <meta name="twitter:image" content="img/png/card.png" />
           <meta name="twitter:app:country" content="NG" />
         </Head>
-        <motion.div animate={{top: "-100vh", transition: {...transition, delay: 9}}} className="preloader">
+        <audio loop id="audioPlayer" autoPlay style={{ display: "none" }}>
+          <source src="sound/preloader.mp3" type="audio/mp3" />
+        </audio>
+        <motion.div
+          data-scroll
+          data-scroll-sticky
+          data-scroll-target="#menu-target"
+          animate={{ top: "-100vh", transition: { ...transition, delay: 9 } }}
+          className="preloader"
+        >
           <div className="preloader__wrapper">
             <motion.div
               initial={{ x: -10, opacity: 0 }}
