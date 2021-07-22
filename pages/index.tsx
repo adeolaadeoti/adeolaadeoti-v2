@@ -557,7 +557,6 @@ const index: React.FC<indexProps> = ({}) => {
                 href="mailto:adeolaonigegeara@gmail.com"
                 rel="noopener"
                 target="_blank"
-                rel="nofollow noopener noreferrer"
               >
                 &nbsp; email 📧
               </a>
@@ -595,7 +594,6 @@ const index: React.FC<indexProps> = ({}) => {
               href="https://dribbble.com/adeolaadeoti"
               target="_blank"
               rel="noopener"
-              rel="noopener noreferrer"
             >
               <img src="svg/dribble.svg" alt="dribble logo" />
             </a>
@@ -603,7 +601,6 @@ const index: React.FC<indexProps> = ({}) => {
               href="https://github.com/adeolaadeoti"
               target="_blank"
               rel="noopener"
-              rel="noopener noreferrer"
             >
               <img src="svg/github.svg" alt="github logo" />
             </a>
