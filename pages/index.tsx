@@ -23,17 +23,14 @@ const index: React.FC<indexProps> = ({}) => {
     lscroll = new locomotiveScroll({
       el: refScroll.current,
       smooth: true,
-      inertia: 0.2,
-      getSpeed: true,
-      getDirection: true,
-      reloadOnContextChange: true,
+      inertia: 0.3,
       // multiplier: 0.65,
-      smartphone: {
-        smooth: true,
-      },
-      tablet: {
-        smooth: true,
-      },
+      // smartphone: {
+      //   smooth: true,
+      // },
+      // tablet: {
+      //   smooth: true,
+      // },
     });
 
     // update locomotive scroll
@@ -50,8 +47,6 @@ const index: React.FC<indexProps> = ({}) => {
         const imgs: any = Array.from(el.querySelectorAll("img"));
         new hoverEffect({
           parent: el,
-          // angle2: Math.PI / 2,
-          // imagesRatio: 512 / 512,
           intensity: 0.2,
           speedIn: el.dataset.speedin || undefined,
           speedOut: el.dataset.speedout || undefined,
@@ -205,14 +200,14 @@ const index: React.FC<indexProps> = ({}) => {
                       fill="#F2F2F2"
                       className="rect3-anim"
                     />
-                    <rect
+                    {/* <rect
                       x="13.2"
                       y="1.06665"
                       width="1.4"
                       height="10"
                       fill="#F2F2F2"
                       className="rect4-anim"
-                    />
+                    /> */}
                   </svg>
                 </div>
               </div>
