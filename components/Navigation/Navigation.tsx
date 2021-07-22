@@ -31,7 +31,6 @@ export const Navigation = ({ isOpen, toggleOpen }: any) => {
       animate={isOpen ? "open" : "closed"}
       className="navigation-wrapper"
     >
-      {/* <div className="menu-background"></div> */}
       <MobileNavigation variants={variants} isOpen={isOpen} />
       <div
         data-scroll

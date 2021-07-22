@@ -8,7 +8,8 @@
   z-index: 9999;
 
   .menu-top {
-    position: absolute;
+    position: fixed;
+    // position: absolute;
     top: 5rem;
     right: 0;
     left: 0;
@@ -23,7 +24,8 @@
     border-radius: 2rem;
 
     @media only screen and (max-width: 40em) {
-      width: 70%;
+      width: 75%;
+      padding: 2rem;
     }
 
     .brand-logo {
@@ -67,13 +69,14 @@
   &__text {
     animation: logoLeftAnim 15s cubic-bezier(1, 0, 0, 1) infinite;
     @media only screen and (max-width: 40em) {
-      display: none;
+      // display: none;
     }
   }
 }
 
 .menu-wrapper {
-  position: absolute;
+  position: fixed;
+  // position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -86,9 +89,26 @@
 .navigation-top {
   margin-top: 30rem;
   @include centerContent;
-  padding: 0 40rem;
+  // padding: 0 40rem;
+  width: 80%;
+  margin-left: auto;
+  text-align: center;
+  margin-right: auto;
+
+  @media only screen and (max-width: 57em) {
+    flex-direction: column;
+    text-align: left;
+    width: fit-content;
+    margin-right: 0rem;
+    margin-left: 6rem;
+    align-items: flex-start;
+  }
   &__left {
-    text-align: center;
+    text-align: inherit;
+
+    @media only screen and (max-width: 57em) {
+      margin-bottom: 10rem;
+    }
     &--links {
       width: 30rem;
       @include centerContent;
@@ -110,7 +130,7 @@
     }
   }
   &__right {
-    text-align: center;
+    text-align: inherit;
     a {
       font-size: 5rem;
       letter-spacing: -0.03em;
@@ -131,6 +151,10 @@
   margin-top: 20rem;
   padding: 0 20rem;
   text-align: center;
+
+  @media only screen and (max-width: 57em) {
+    display: none;
+  }
 
   &__projects {
     margin-top: 10rem;
