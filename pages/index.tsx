@@ -28,12 +28,12 @@ const index: React.FC<indexProps> = ({}) => {
       lerp: 0.1,
       touchMultiplier: 3,
       reloadOnContextChange: true,
-      smartphone: {
-        smooth: true,
-      },
-      tablet: {
-        smooth: true,
-      },
+      // smartphone: {
+      //   smooth: true,
+      // },
+      // tablet: {
+      //   smooth: true,
+      // },
     });
 
     // update locomotive scroll
