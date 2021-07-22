@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Head from "next/head";
+import { motion } from "framer-motion";
 import { Navigation } from "../components/Navigation/Navigation";
 
 interface indexProps {}
@@ -9,6 +10,11 @@ const locomotiveScroll =
 
 const hoverEffect =
   typeof window !== `undefined` ? require("hover-effect").default : null;
+
+const transition: { duration: number; ease: number[] } = {
+  duration: 1.4,
+  ease: [0.6, 0.01, -0.05, 0.9],
+};
 
 const index: React.FC<indexProps> = ({}) => {
   const [speakerState, setSpeakerState] = useState("muted");
@@ -23,11 +29,8 @@ const index: React.FC<indexProps> = ({}) => {
     lscroll = new locomotiveScroll({
       el: refScroll.current,
       smooth: true,
-      inertia: 0.2,
-      multiplier: 1,
-      lerp: 0.1,
-      touchMultiplier: 3,
       reloadOnContextChange: true,
+      multiplier: 0.65,
       // smartphone: {
       //   smooth: true,
       // },
@@ -83,8 +86,10 @@ const index: React.FC<indexProps> = ({}) => {
   function toggleBodyScroll(isToggleOpen: boolean) {
     if (isToggleOpen === false) {
       setIsToggleOpen(true);
+      document.body.style.overflowY = "scroll";
     } else if (isToggleOpen === true) {
       setIsToggleOpen(false);
+      document.body.style.overflowY = "hidden";
     }
   }
 
@@ -129,6 +134,30 @@ const index: React.FC<indexProps> = ({}) => {
           <meta name="twitter:image" content="img/png/card.png" />
           <meta name="twitter:app:country" content="NG" />
         </Head>
+        <motion.div animate={{top: "-100vh", transition: {...transition, delay: 9}}} className="preloader">
+          <div className="preloader__wrapper">
+            <motion.div
+              initial={{ x: -10, opacity: 0 }}
+              animate={{ x: 0, opacity: 1, transition: { ...transition } }}
+              className="preloader__left"
+            >
+              <img src="svg/adeola-logo-left.svg" alt="adeola logo" />
+            </motion.div>
+            <motion.div
+              initial={{ x: 10, opacity: 0 }}
+              animate={{ x: 0, opacity: 1, transition: { ...transition } }}
+              className="preloader__right"
+            >
+              <p className="preloader__text">HTML</p>
+              <p className="preloader__text">CSS/SCSS</p>
+              <p className="preloader__text">JAVASCRIPT</p>
+              <p className="preloader__text">TYPESCRIPT</p>
+              <p className="preloader__text">REACT JS</p>
+              <p className="preloader__text">NEXT JS</p>
+              <p className="preloader__text">FRAMER MOTION</p>
+            </motion.div>
+          </div>
+        </motion.div>
         <div className="cursor"></div>
         <Navigation
           isOpen={isToggleOpen}

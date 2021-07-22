@@ -101,3 +101,12 @@
 .rot {
   animation: cursorAnim 1s infinite linear;
 }
+
+@keyframes preloaderTextAnim {
+  0% {
+    transform: translateY(0%);
+  }
+  50%, 100% {
+    transform: translateY(-600%);
+  }
+}

@@ -71,11 +71,77 @@ body {
   }
 }
 
-.smooth-scroll-wrapper {
-  position: relative;
+// preloader
+.preloader {
   width: 100vw;
-  will-change: transform;
-  transition: transform 0.25s;
+  height: 100vh;
+  background-color: #10101a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 129993994;
+  display: grid;
+  place-content: center;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__left {
+    margin-right: 1rem;
+  }
+
+  &__right {
+    margin-left: 1rem;
+    width: max-content;
+    height: 4rem;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(
+        to bottom,
+        #10101a 5%,
+        rgba(#10101a, 0) 30%
+      );
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    &::after {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(
+        to top,
+        #10101a 5%,
+        rgba(#10101a, 0) 30%
+      );
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+
+  &__text {
+    font-family: $font-tertiary;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 210%;
+    letter-spacing: 0.19em;
+    color: var(--color-white);
+    animation: preloaderTextAnim 12s linear;
+    animation-delay: 3s;
+  }
 }
 
 /*! locomotive-scroll v4.1.1 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
