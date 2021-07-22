@@ -31,13 +31,13 @@ const index: React.FC<indexProps> = ({}) => {
       smooth: true,
       reloadOnContextChange: true,
       multiplier: 0.65,
-      inertia: 0.3
+      inertia: 0.3,
     });
 
     // update locomotive scroll
     window.addEventListener("load", () => {
       let image = document.querySelector("img");
-    // @ts-ignore
+      // @ts-ignore
       const isLoaded = image!.complete && image!.naturalHeight !== 0;
       lscroll.update();
     });
@@ -71,7 +71,7 @@ const index: React.FC<indexProps> = ({}) => {
   }, []);
 
   const handleSpeaker = () => {
-    const audio = document.querySelector("#audioPlayer") as HTMLVideoElement;  
+    const audio = document.querySelector("#audioPlayer") as HTMLVideoElement;
 
     if (speakerState === "muted") {
       setSpeakerState("unmuted");
@@ -305,14 +305,21 @@ const index: React.FC<indexProps> = ({}) => {
                   Alexxandria
                   <br /> Forque
                 </h2>
-                <a href="#" className="project-card__link">
+                <a
+                  target="_blank"
+                  href="https://alexxandria.vercel.app/"
+                  className="project-card__link"
+                >
                   VISIT THE WEBSITE
                 </a>
                 <div className="project-card__socials">
                   <a href="#">
                     <img src="svg/dribble.svg" alt="dribble icon" />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    href="https://github.com/adeolaadeoti/alexxandria"
+                  >
                     <img src="svg/github.svg" alt="github icon" />
                   </a>
                 </div>
@@ -340,14 +347,21 @@ const index: React.FC<indexProps> = ({}) => {
                 >
                   PixelChef
                 </h2>
-                <a href="#" className="project-card__link">
+                <a
+                  target="_blank"
+                  href="https://pixelchef.netlify.app/"
+                  className="project-card__link"
+                >
                   VISIT THE WEBSITE
                 </a>
                 <div className="project-card__socials">
                   <a href="#">
                     <img src="svg/dribble.svg" alt="dribble icon" />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    href="https://github.com/adeolaadeoti/pixelchef"
+                  >
                     <img src="svg/github.svg" alt="github icon" />
                   </a>
                 </div>
@@ -378,14 +392,21 @@ const index: React.FC<indexProps> = ({}) => {
                   Heatrow
                   <br /> Estate
                 </h2>
-                <a href="#" className="project-card__link">
+                <a
+                  href="https://heatrow.vercel.app/"
+                  target="_blank"
+                  className="project-card__link"
+                >
                   VISIT THE WEBSITE
                 </a>
                 <div className="project-card__socials">
                   <a href="#">
                     <img src="svg/dribble.svg" alt="dribble icon" />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    href="https://github.com/adeolaadeoti/heatrow"
+                  >
                     <img src="svg/github.svg" alt="github icon" />
                   </a>
                 </div>
@@ -414,14 +435,24 @@ const index: React.FC<indexProps> = ({}) => {
                   AdeolaAdeoti
                   <br /> version 1
                 </h2>
-                <a href="#" className="project-card__link">
+                <a
+                  target="_blank"
+                  href="https://adeolaadeoti.netlify.app/"
+                  className="project-card__link"
+                >
                   VISIT THE WEBSITE
                 </a>
                 <div className="project-card__socials">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    href="https://dribbble.com/shots/12338926-Adeola-Adeoti-Portfolio"
+                  >
                     <img src="svg/dribble.svg" alt="dribble icon" />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    href="https://github.com/adeolaadeoti/adeolaadeoti-portfolio"
+                  >
                     <img src="svg/github.svg" alt="github icon" />
                   </a>
                 </div>
@@ -817,10 +848,10 @@ const index: React.FC<indexProps> = ({}) => {
             alt="design and devloped by adeola"
           />
           <div className="footer__socials">
-            <a href="http://" target="_blank" rel="noopener noreferrer">
+            <a href="https://dribbble.com/adeolaadeoti" target="_blank" rel="noopener noreferrer">
               <img src="svg/dribble.svg" alt="dribble logo" />
             </a>
-            <a href="http://" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/adeolaadeoti" target="_blank" rel="noopener noreferrer">
               <img src="svg/github.svg" alt="github logo" />
             </a>
           </div>

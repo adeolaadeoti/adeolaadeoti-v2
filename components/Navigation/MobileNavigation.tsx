@@ -76,16 +76,19 @@ export const MobileNavigation = ({ variants, isOpen }: any) => (
         </div>
       </motion.div>
 
-      <motion.div animate={
+      <motion.div
+        animate={
           isOpen
             ? { opacity: 1, transition: openBottomTransition }
             : { opacity: 0, transition: closedTansition }
-        } className="navigation-bottom">
+        }
+        className="navigation-bottom"
+      >
         <h4 className="navigation-h4">FEATURED PROJECTS</h4>
         <div className="navigation-bottom__projects">
           <a
-            href="https://"
             target="_blank"
+            href="https://alexxandria.vercel.app/"
             className="navigation-bottom__projects-card"
           >
             <img src="webp/alexxandria-nav.webp" alt="alexxandria" />
@@ -96,7 +99,7 @@ export const MobileNavigation = ({ variants, isOpen }: any) => (
             </h2>
           </a>
           <a
-            href="https://"
+            href="https://pixelchef.netlify.app/"
             target="_blank"
             className="navigation-bottom__projects-card"
           >
@@ -104,7 +107,7 @@ export const MobileNavigation = ({ variants, isOpen }: any) => (
             <h2>PixelChef</h2>
           </a>
           <a
-            href="https://"
+            href="https://adeolaadeoti.netlify.app/"
             target="_blank"
             className="navigation-bottom__projects-card"
           >
