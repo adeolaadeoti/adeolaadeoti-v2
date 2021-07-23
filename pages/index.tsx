@@ -596,14 +596,14 @@ const index: React.FC<indexProps> = ({}) => {
           />
           <div className="footer__socials">
             <a
-              href="https://dribbble.com/adeolaadeoti"
+              href="https://dribbble.com/shots/16100745-Adeola-Adeoti-Personal-Website"
               target="_blank"
               rel="noopener"
             >
               <img src="svg/dribble.svg" alt="dribble logo" />
             </a>
             <a
-              href="https://github.com/adeolaadeoti"
+              href="https://github.com/adeolaadeoti/adeolaadeoti-v2"
               target="_blank"
               rel="noopener"
             >
