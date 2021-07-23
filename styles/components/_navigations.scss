@@ -84,10 +84,11 @@
   height: 100vh;
   background-color: #050810;
   color: var(--color-white);
+  overflow-y: scroll;
 }
 
 .navigation-top {
-  margin-top: 30rem;
+  margin-top: 25rem;
   @include centerContent;
   // padding: 0 40rem;
   width: 80%;
@@ -148,7 +149,7 @@
 }
 
 .navigation-bottom {
-  margin-top: 20rem;
+  margin-top: 15rem;
   padding: 0 20rem;
   text-align: center;
 
