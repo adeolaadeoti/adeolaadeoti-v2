@@ -553,7 +553,7 @@ const index: React.FC<indexProps> = ({}) => {
               <span>Sold Yet? </span> <small>🤙</small>
             </h1>
             <h2 className="section-contact__h2">
-              Thanks for stopping by, I’m currently looking to a new team of
+              Thanks for stopping by, I’m currently looking to join a new team of
               creative designers and developers. If you think we might be a good
               fit for one another, give me a
               <a href="tel:+2349066383763"> call 🇳🇬 &nbsp;</a>
