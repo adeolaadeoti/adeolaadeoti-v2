@@ -552,19 +552,21 @@
   }
 
   &--links {
-    width: max-content;
     @include centerContent;
     margin-top: 4rem;
-    gap: 4rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 40rem;
   }
   a {
+    @include centerContent;
     color: var(--color-gray);
     text-decoration: none;
     font-family: $font-tertiary;
     line-height: 92.4%;
     letter-spacing: -0.03em;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 100;
     transition: all 0.3s ease-in-out;
     &:hover {
