@@ -116,7 +116,7 @@ export const MobileNavigation = ({ variants, isOpen }: any) => (
             </h2>
           </a>
           <a
-            href="https://safarika.netlify.app/"
+            href="https://safarika-adeola.netlify.app/"
             target="_blank"
             rel="noopener"
             className="navigation-bottom__projects-card"

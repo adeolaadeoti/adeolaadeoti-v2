@@ -393,7 +393,7 @@ const index: React.FC<indexProps> = ({}) => {
                 <a
                   rel="noopener"
                   target="_blank"
-                  href="https://safarika.netlify.app/"
+                  href="https://safarika-adeola.netlify.app/"
                   className="project-card__link"
                 >
                   VISIT THE WEBSITE
