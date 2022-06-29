@@ -12,11 +12,12 @@
     "hover-effect": "^1.1.0",
     "locomotive-scroll": "^4.1.1",
     "next": "latest",
+    "prop-types": "^15.8.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "swr": "^0.1.18",
+    "react-ga": "^3.1.2",
     "sass": "^1.26.3",
-    "react-ga": "^3.1.2"
+    "swr": "^0.1.18"
   },
   "devDependencies": {
     "@types/node": "^12.12.21",
