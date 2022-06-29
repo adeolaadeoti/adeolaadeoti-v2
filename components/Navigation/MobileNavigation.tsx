@@ -50,16 +50,32 @@ export const MobileNavigation = ({ variants, isOpen }: any) => (
         <div className="navigation-top__left">
           <h4 className="navigation-h4">DONT BE A STRANGER</h4>
           <div className="navigation-top__left--links">
-            <a href="https://github.com/adeolaadeoti" rel="noopener" target="_blank">
+            <a
+              href="https://github.com/adeolaadeoti"
+              rel="noopener"
+              target="_blank"
+            >
               👾 GH
             </a>
-            <a href="https://twitter.com/adeolajs" rel="noopener" target="_blank">
+            <a
+              href="https://twitter.com/adeolajs"
+              rel="noopener"
+              target="_blank"
+            >
               🐦 TW
             </a>
-            <a href="https://www.linkedin.com/in/adeoladev" rel="noopener" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/adeoladev"
+              rel="noopener"
+              target="_blank"
+            >
               💼 LD
             </a>
-            <a href="https://www.instagram.com/adeolaadeoti_" rel="noopener" target="_blank">
+            <a
+              href="https://www.instagram.com/adeolaadeoti_"
+              rel="noopener"
+              target="_blank"
+            >
               📸 IN
             </a>
           </div>
@@ -100,13 +116,13 @@ export const MobileNavigation = ({ variants, isOpen }: any) => (
             </h2>
           </a>
           <a
-            href="https://pixelchef.netlify.app/"
+            href="https://safarika.netlify.app/"
             target="_blank"
             rel="noopener"
             className="navigation-bottom__projects-card"
           >
-            <img src="webp/pixelchef-nav.webp" alt="pixelChef" />
-            <h2>PixelChef</h2>
+            <img src="webp/safarika-nav.webp" alt="safarika" />
+            <h2>Safarika</h2>
           </a>
           <a
             href="https://adeolaadeoti.netlify.app/"

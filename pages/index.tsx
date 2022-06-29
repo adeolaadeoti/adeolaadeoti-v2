@@ -5,7 +5,6 @@ import { Navigation } from "../components/Navigation/Navigation";
 import useSwr from "swr";
 import ReactGa from "react-ga";
 
-
 interface indexProps {}
 
 interface Ireply {
@@ -48,8 +47,8 @@ const index: React.FC<indexProps> = ({}) => {
       el: refScroll.current,
       smooth: true,
       reloadOnContextChange: true,
-      multiplier: 0.65,
-      inertia: 0.3,
+      multiplier: 0.75,
+      inertia: 0.5,
     });
 
     // update locomotive scroll
@@ -277,16 +276,32 @@ const index: React.FC<indexProps> = ({}) => {
               </div>
             </div>
             <div className="header__footer--right">
-              <a href="https://github.com/adeolaadeoti" rel="noopener" target="_blank">
+              <a
+                href="https://github.com/adeolaadeoti"
+                rel="noopener"
+                target="_blank"
+              >
                 👾 GH
               </a>
-              <a href="https://twitter.com/adeolajs" rel="noopener" target="_blank">
+              <a
+                href="https://twitter.com/adeolajs"
+                rel="noopener"
+                target="_blank"
+              >
                 🐦 TW
               </a>
-              <a href="https://www.linkedin.com/in/adeoladev" rel="noopener" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/adeoladev"
+                rel="noopener"
+                target="_blank"
+              >
                 💼 LD
               </a>
-              <a href="https://www.instagram.com/adeolaadeoti_" rel="noopener" target="_blank">
+              <a
+                href="https://www.instagram.com/adeolaadeoti_"
+                rel="noopener"
+                target="_blank"
+              >
                 {" "}
                 📸 IN
               </a>
@@ -332,7 +347,7 @@ const index: React.FC<indexProps> = ({}) => {
                   <br /> Forque
                 </h2>
                 <a
-                rel="noopener"
+                  rel="noopener"
                   target="_blank"
                   href="https://alexxandria.vercel.app/"
                   className="project-card__link"
@@ -344,7 +359,7 @@ const index: React.FC<indexProps> = ({}) => {
                     <img src="svg/dribble.svg" alt="dribble icon" />
                   </a>
                   <a
-                  rel="noopener"
+                    rel="noopener"
                     target="_blank"
                     href="https://github.com/adeolaadeoti/alexxandria"
                   >
@@ -362,35 +377,39 @@ const index: React.FC<indexProps> = ({}) => {
                 className="project-card__middle"
                 data-displacement="webp/myDistorsionImage.webp"
               >
-                <img src="webp/pixelchef-1.webp" alt="pixelchef" />
-                <img src="webp/pixelchef-2.webp" alt="pixelchef logo" />
+                <img src="webp/safarika-1.webp" alt="safarika" />
+                <img src="webp/safarika-2.webp" alt="safarika logo" />
               </div>
               <div className="project-card__right">
                 <h2
                   data-scroll
                   data-scroll-offset="35%"
                   data-scroll-repeat={true}
-                  data-scroll-class="pixelchef-anim"
+                  data-scroll-class="safarika-anim"
                   className="heading-2"
                 >
-                  PixelChef
+                  Safarika
                 </h2>
                 <a
-                rel="noopener"
+                  rel="noopener"
                   target="_blank"
-                  href="https://pixelchef.netlify.app/"
+                  href="https://safarika.netlify.app/"
                   className="project-card__link"
                 >
                   VISIT THE WEBSITE
                 </a>
                 <div className="project-card__socials">
-                  <a href="#">
+                  <a
+                    rel="noopener"
+                    target="_blank"
+                    href="https://dribbble.com/shots/12361426-Safarika-Adventure"
+                  >
                     <img src="svg/dribble.svg" alt="dribble icon" />
                   </a>
                   <a
-                  rel="noopener"
+                    rel="noopener"
                     target="_blank"
-                    href="https://github.com/adeolaadeoti/pixelchef"
+                    href="https://github.com/adeolaadeoti/safarika"
                   >
                     <img src="svg/github.svg" alt="github icon" />
                   </a>
@@ -435,7 +454,7 @@ const index: React.FC<indexProps> = ({}) => {
                     <img src="svg/dribble.svg" alt="dribble icon" />
                   </a>
                   <a
-                  rel="noopener"
+                    rel="noopener"
                     target="_blank"
                     href="https://github.com/adeolaadeoti/heatrow"
                   >
@@ -468,23 +487,23 @@ const index: React.FC<indexProps> = ({}) => {
                   <br /> version 1
                 </h2>
                 <a
-                rel="noopener"
+                  rel="noopener"
                   target="_blank"
-                  href="https://adeolaadeoti.netlify.app/"
+                  href="https://github.com/adeolaadeoti/adeolaadeoti-portfolio"
                   className="project-card__link"
                 >
-                  VISIT THE WEBSITE
+                  VIEW SOURCE CODE
                 </a>
                 <div className="project-card__socials">
                   <a
-                  rel="noopener"
+                    rel="noopener"
                     target="_blank"
                     href="https://dribbble.com/shots/12338926-Adeola-Adeoti-Portfolio"
                   >
                     <img src="svg/dribble.svg" alt="dribble icon" />
                   </a>
                   <a
-                  rel="noopener"
+                    rel="noopener"
                     target="_blank"
                     href="https://github.com/adeolaadeoti/adeolaadeoti-portfolio"
                   >
@@ -553,9 +572,9 @@ const index: React.FC<indexProps> = ({}) => {
               <span>Sold Yet? </span> <small>🤙</small>
             </h1>
             <h2 className="section-contact__h2">
-              Thanks for stopping by, I’m currently looking to join a new team of
-              creative designers and developers. If you think we might be a good
-              fit for one another, give me a
+              Thanks for stopping by, I’m currently looking to join a new team
+              of creative designers and developers. If you think we might be a
+              good fit for one another, give me a
               <a href="tel:+2349066383763"> call 🇳🇬 &nbsp;</a>
               or send me an
               <a
@@ -574,17 +593,33 @@ const index: React.FC<indexProps> = ({}) => {
             </h1>
             <p className="paragraph">Connect with me online</p>
             <div className="section-socials--links">
-              <a href="https://github.com/adeolaadeoti" rel="noopener" target="_blank">
-                👾 GH
+              <a
+                href="https://github.com/adeolaadeoti"
+                rel="noopener"
+                target="_blank"
+              >
+                👾 GitHub
               </a>
-              <a href="https://twitter.com/adeolajs" rel="noopener" target="_blank">
-                🐦 TW
+              <a
+                href="https://twitter.com/adeolajs"
+                rel="noopener"
+                target="_blank"
+              >
+                🐦 Twitter
               </a>
-              <a href="https://www.linkedin.com/in/adeoladev" rel="noopener" target="_blank">
-                💼 LD
+              <a
+                href="https://www.linkedin.com/in/adeoladev"
+                rel="noopener"
+                target="_blank"
+              >
+                💼 LinkedIn
               </a>
-              <a href="https://www.instagram.com/adeolaadeoti_" rel="noopener" target="_blank">
-                📸 IN
+              <a
+                href="https://www.instagram.com/adeolaadeoti_"
+                rel="noopener"
+                target="_blank"
+              >
+                📸 Instagram
               </a>
             </div>
           </section>

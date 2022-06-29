@@ -552,9 +552,10 @@
   }
 
   &--links {
-    width: 30rem;
+    width: max-content;
     @include centerContent;
     margin-top: 4rem;
+    gap: 4rem;
   }
   a {
     color: var(--color-gray);
