@@ -7,6 +7,10 @@
   // width: 100vw;
   z-index: 9999;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   .menu-top {
     position: fixed;
     // position: absolute;
@@ -76,15 +80,17 @@
 
 .menu-wrapper {
   position: fixed;
-  // position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 2rem auto;
   background-color: #050810;
   color: var(--color-white);
   overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .navigation-top {
@@ -149,8 +155,8 @@
 }
 
 .navigation-bottom {
-  margin-top: 15rem;
-  padding: 0 20rem;
+  margin-top: 8rem;
+  padding: 2rem 20rem;
   text-align: center;
 
   @media only screen and (max-width: 57em) {
