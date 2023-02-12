@@ -7,6 +7,10 @@
   // width: 100vw;
   z-index: 9999;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   .menu-top {
     position: fixed;
     // position: absolute;
@@ -82,9 +86,14 @@
   width: 100%;
   overflow: hidden;
   height: 100vh;
+  padding: 2rem auto;
   background-color: #050810;
   color: var(--color-white);
   overflow-y: scroll;
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .navigation-top {
