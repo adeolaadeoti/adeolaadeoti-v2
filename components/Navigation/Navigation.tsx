@@ -1,5 +1,5 @@
 import * as React from "react";
-import { motion } from "framer-motion";
+import { cubicBezier, motion } from "framer-motion";
 import { MenuToggle } from "./MenuToggle";
 import { MobileNavigation } from "./MobileNavigation";
 import Link from "next/link";
@@ -10,7 +10,7 @@ const variants = {
     pointerEvent: "none",
     transition: {
       duration: 1,
-      ease: [0.6, 0.01, -0.05, 0.9],
+      ease: cubicBezier(0.6, 0.01, -0.05, 0.9),
     },
   },
   closed: {
@@ -19,7 +19,7 @@ const variants = {
     transition: {
       delay: 1,
       duration: 1,
-      ease: [0.6, 0.01, -0.05, 0.9],
+      ease: cubicBezier(0.6, 0.01, -0.05, 0.9),
     },
   },
 };
@@ -38,21 +38,19 @@ export const Navigation = ({ isOpen, toggleOpen }: any) => {
         data-scroll-target="#menu-target"
         className="menu-top"
       >
-        <Link href="/">
-          <a className="brand-logo">
+        <Link href="/" className="brand-logo">
+          <img
+            className="brand-logo__icon"
+            src="svg/adeola-logo-left.svg"
+            alt="adeola logo icon"
+          />
+          <span className="brand-logo__text-wrapper">
             <img
-              className="brand-logo__icon"
-              src="svg/adeola-logo-left.svg"
-              alt="adeola logo icon"
+              className="brand-logo__text"
+              src="svg/adeola-logo-right.svg"
+              alt="adeola logo text"
             />
-            <span className="brand-logo__text-wrapper">
-              <img
-                className="brand-logo__text"
-                src="svg/adeola-logo-right.svg"
-                alt="adeola logo text"
-              />
-            </span>
-          </a>
+          </span>
         </Link>
         <MenuToggle toggle={toggleOpen} toggleState={isOpen} />
       </div>

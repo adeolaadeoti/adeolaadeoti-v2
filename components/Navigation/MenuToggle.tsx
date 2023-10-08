@@ -28,9 +28,9 @@ export const MenuToggle: React.FC<menuToggleProps> = ({
   toggle,
   toggleState,
 }) => (
-  <div className="toggle-button-wrapper">
-    {toggleState === true ? <span>CLOSE</span> : <span>MENU</span>}
-    <button className="toggle-button" onClick={toggle}>
+  <div className="toggle-button-wrapper" onClick={toggle}>
+    {toggleState ? <span>CLOSE</span> : <span>MENU</span>}
+    <button className="toggle-button">
       <motion.svg
         whileHover={{ width: 47, height: 15 }}
         width="57"

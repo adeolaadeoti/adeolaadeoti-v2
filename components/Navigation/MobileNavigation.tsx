@@ -1,27 +1,27 @@
 import * as React from "react";
-import { motion } from "framer-motion";
+import { cubicBezier, motion } from "framer-motion";
 
 const openTransition = {
   duration: 1.1,
   delay: 1.2,
-  ease: [0.6, 0.01, -0.05, 0.9],
+  ease: cubicBezier(0.6, 0.01, -0.05, 0.9),
 };
 
 const openTopTransition = {
   duration: 1.1,
   delay: 1.3,
-  ease: [0.6, 0.01, -0.05, 0.9],
+  ease: cubicBezier(0.6, 0.01, -0.05, 0.9),
 };
 
 const openBottomTransition = {
   duration: 1.1,
   delay: 1.7,
-  ease: [0.6, 0.01, -0.05, 0.9],
+  ease: cubicBezier(0.6, 0.01, -0.05, 0.9),
 };
 
 const closedTansition = {
   duration: 1,
-  ease: [0.6, 0.01, -0.05, 0.9],
+  ease: cubicBezier(0.6, 0.01, -0.05, 0.9),
 };
 
 export const MobileNavigation = ({ variants, isOpen }: any) => (

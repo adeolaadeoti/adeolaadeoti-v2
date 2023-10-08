@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Head from "next/head";
-import { motion } from "framer-motion";
+import { cubicBezier, motion } from "framer-motion";
 import { Navigation } from "../components/Navigation/Navigation";
 import useSwr from "swr";
 import ReactGa from "react-ga";
@@ -20,14 +20,15 @@ const locomotiveScroll =
 const hoverEffect =
   typeof window !== `undefined` ? require("hover-effect").default : null;
 
-const transition: { duration: number; ease: number[] } = {
+const transition: { duration: number; ease: any } = {
   duration: 1.4,
-  ease: [0.6, 0.01, -0.05, 0.9],
+  ease: cubicBezier(0.6, 0.01, -0.05, 0.9),
+  // ease: [0.6, 0.01, -0.05, 0.9],
 };
 
 const fetcher = (url: any) => fetch(url).then((res) => res.json());
 
-const index: React.FC<indexProps> = ({}) => {
+const index: React.FC<indexProps> = () => {
   const [speakerState, setSpeakerState] = useState("muted");
   const [isToggleOpen, setIsToggleOpen] = useState<boolean>(false);
   const { data: reviews, error } = useSwr("/api/tweets", fetcher);
@@ -574,9 +575,7 @@ const index: React.FC<indexProps> = ({}) => {
             <h2 className="section-contact__h2">
               Thanks for stopping by, I’m currently looking to join a new team
               of creative designers and developers. If you think we might be a
-              good fit for one another, give me a
-              <a href="tel:+2349066383763"> call 🇳🇬 &nbsp;</a>
-              or send me an
+              good fit for one another, send me an
               <a
                 href="mailto:adeolaonigegeara@gmail.com"
                 rel="noopener"
